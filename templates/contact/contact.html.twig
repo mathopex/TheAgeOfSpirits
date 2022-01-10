@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactez-Nous{% endblock %}
+
+{% block body %}
+
+    <div>
+        <div>
+            <h1>Contactez-Nous</h1>
+
+            <p>Nous vous répondrons sous 24 heures.</p>
+
+            {{ form_start(form) }}
+
+                {{ form_row(form.motif) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.message) }}
+
+            <div>
+                <button type="submit">Envoyer</button>
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+{% endblock %}
