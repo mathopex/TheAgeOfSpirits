@@ -36,8 +36,8 @@ class PersoFormType extends AbstractType
                 'label' => "Votre clan",
                 'choices' =>
                 [
-                    'H' => 'Humain',
-                    'E' => 'Esprit',
+                    'Humain' => 'Humain',
+                    'Esprit' => 'Esprit',
                 ]
             ])
 
@@ -46,9 +46,9 @@ class PersoFormType extends AbstractType
                 'label' => "Votre sex",
                 'choices' =>
                 [
-                    'H' => 'Humain',
-                    'F' => 'Femme',
-                    'NB' => 'Non Binaire'
+                    'Homme' => 'Homme',
+                    'Femme' => 'Femme',
+                    'NonBinaire' => 'Non Binaire'
                 ]
             ])
 
@@ -93,7 +93,7 @@ class PersoFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Perso::class,
+            'data_class' =>Perso::class,
         ]);
     }
 }
