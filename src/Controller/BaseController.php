@@ -6,11 +6,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class PreHomePageController extends AbstractController
+class BaseController extends AbstractController
 {
     #[Route('', name: 'pre_home_page')]
     public function index(): Response
     {
-        return $this->render('pre_home_page/index.html.twig');
+        return $this->render('base/preHomePage.html.twig');
+    }
+
+    #[Route('/home', name: 'home_page')]
+    public function home(): Response
+    {
+        return $this->render('base/homePage.html.twig');
     }
 }
