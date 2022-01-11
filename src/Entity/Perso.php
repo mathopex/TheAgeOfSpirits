@@ -2,12 +2,15 @@
 
 namespace App\Entity;
 
+use App\Entity\Traits\CreatedAtTrait;
 use App\Repository\PersoRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: PersoRepository::class)]
 class Perso
 {
+    use CreatedAtTrait;
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
@@ -46,8 +49,6 @@ class Perso
     #[ORM\Column(type: 'integer')]
     private $specialitis_value;
 
-    #[ORM\Column(type: 'datetime_immutable')]
-    private $createdAt;
 
     public function getId(): ?int
     {
@@ -182,18 +183,6 @@ class Perso
     public function setSpecialitisValue(int $specialitis_value): self
     {
         $this->specialitis_value = $specialitis_value;
-
-        return $this;
-    }
-
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(\DateTimeImmutable $createdAt): self
-    {
-        $this->createdAt = $createdAt;
 
         return $this;
     }
