@@ -91,7 +91,6 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.5"
     },
-<<<<<<< HEAD
     "gedmo/doctrine-extensions": {
         "version": "v3.5.0"
     },
@@ -100,10 +99,9 @@
     },
     "knplabs/knp-paginator-bundle": {
         "version": "v5.8.0"
-=======
+    },
     "imagine/imagine": {
         "version": "1.2.4"
->>>>>>> b1228c26ee30c2529148974ff59f4d5874a8ef05
     },
     "laminas/laminas-code": {
         "version": "4.5.1"
