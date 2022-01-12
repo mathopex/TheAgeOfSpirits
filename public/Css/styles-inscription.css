@@ -1,0 +1,46 @@
+header {
+  background-image: url(../images/fond/bg_headerblue.jpg);
+}
+
+/****FOOTER****/
+
+footer {
+  background-image: url(../images/fond/bgfooterblue.jpg);
+}
+
+/******body******/
+body {
+  background-color: #174f68;
+  font-family: "MedievalSharp", cursive;
+}
+
+label {
+  color: white;
+}
+.form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: white;
+}
+
+#h1-inscription {
+  color: #94cde8;
+}
+
+#btn-inscription {
+  background-color: #4d2913;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+#bg {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+#registration_form_password_first_help {
+  color: white;
+}

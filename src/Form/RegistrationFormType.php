@@ -21,75 +21,108 @@ class RegistrationFormType extends AbstractType
     {
         $builder
 
-        ->add('name', TextType::class,
-            [
-                'label' => "Votre nom",
-            ])
+            ->add(
+                'name',
+                TextType::class,
+                [
+                    'label' => "Votre nom",
+                ]
+            )
 
-        ->add('firstname', TextType::class,
-            [
-                'label' => "Votre prénom",
-            ])
+            ->add(
+                'firstname',
+                TextType::class,
+                [
+                    'label' => "Votre prénom",
+                ]
+            )
             ->add('civility', ChoiceType::class, [
                 'label' => "votre Civilité",
-               'choices' => 
-               [
-                   'Mr'=>'Monsieur',
-                   'Mme'=>'Madame'
-               ]
-            ])
-        
-        ->add('address', TextType::class,
-        [
-            'label' => "Votre adresse",
-        ])
-        ->add('email', EmailType::class,
-        [
-            'label' => "Votre Email",
-        ])
-        ->add('password', RepeatedType::class,
-        [
-            'type' => PasswordType::class,
-            'invalid_message'=>"Les mots de passes ne sont pas identiques",
-            'mapped'=>false,
-            'first_options'=>
-            [
-                'label' => "Mot de passe",
-                'attr' => ['autocomplete' => 'new-password'],
-                'help' => "Minimum 6 caractères",
-                'constraints'=>
+                'choices' =>
                 [
-                    new NotBlank(
-                        [
-                            'message'=>"Entrez votre mot de passe",
-                        ]),
-                    new Length(
-                    [
-                        'min'=> 6,
-                        'minMessage'=>"le mot de passe doit faire minimum {{ limit }} caractères",
-                        'max' =>4096,
-                    ]),
-                ],
-            ],
-            'second_options'=>
-            [
-                'label'=>"Confirmez votre mot de passe",
-                'attr'=>['autocomplete'=>'new-password'],
-            ]
-        ])
-        ->add('phoneNumber', TextType::class,
-        [
-            'label' => "Votre Numero de telephone",
-        ])
-     
+                    'Mr' => 'Monsieur',
+                    'Mme' => 'Madame'
+                ]
+            ])
 
-       ;
+            ->add(
+                'address',
+                TextType::class,
+                [
+                    'label' => "Votre adresse",
+                ]
+            )
+
+            ->add(
+                'postCode',
+                TextType::class,
+                [
+                    'label' => "Votre code postal",
+                ]
+            )
+
+            ->add(
+                'city',
+                TextType::class,
+                [
+                    'label' => "Votre ville",
+                ]
+            )
+            ->add(
+                'email',
+                EmailType::class,
+                [
+                    'label' => "Votre Email",
+                ]
+            )
+            ->add(
+                'password',
+                RepeatedType::class,
+                [
+                    'type' => PasswordType::class,
+                    'invalid_message' => "Les mots de passes ne sont pas identiques",
+                    'mapped' => false,
+                    'first_options' =>
+                    [
+                        'label' => "Mot de passe",
+                        'attr' => ['autocomplete' => 'new-password'],
+                        'help' => "Minimum 6 caractères",
+                        'constraints' =>
+                        [
+                            new NotBlank(
+                                [
+                                    'message' => "Entrez votre mot de passe",
+                                ]
+                            ),
+                            new Length(
+                                [
+                                    'min' => 6,
+                                    'minMessage' => "le mot de passe doit faire minimum {{ limit }} caractères",
+                                    'max' => 4096,
+                                ]
+                            ),
+                        ],
+                    ],
+                    'second_options' =>
+                    [
+                        'label' => "Confirmez votre mot de passe",
+                        'attr' => ['autocomplete' => 'new-password'],
+                    ]
+                ]
+            )
+            ->add(
+                'phoneNumber',
+                TextType::class,
+                [
+                    'label' => "Votre Numero de telephone",
+                ]
+            );
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class'=>User::class,
+            'data_class' => User::class,
         ]);
     }
 }
