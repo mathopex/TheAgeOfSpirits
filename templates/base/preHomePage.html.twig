@@ -1,9 +1,13 @@
 
 
 {% block title %}{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/stylesPreHome.css') }}"">
+{% endblock %} 
+
 
 {% block body %}
  
-Pre home page
+<button class="btn-preHome" type="button"><a href=" {{ path('home_page') }}">Entrez</a></button>
  
 {% endblock %}

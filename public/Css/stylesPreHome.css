@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../images/fond/bg-frontpage.jpg);
+  font-family: Arial, Helvetica, Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-preHome {
+  display: block;
+  margin: 270px auto 0;
+  font-size: 20px;
+  font-weight: lighter;
+  background: black;
+  color: white;
+  padding: 15px 60px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  top: 600px;
+}
+
+a,
+a:visited,
+a:focus,
+a:hover {
+  color: white;
+  text-decoration: none;
+}
