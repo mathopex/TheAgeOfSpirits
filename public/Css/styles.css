@@ -20,7 +20,7 @@ header {
   height: 650px;
   width: 100%;
 }
-.head-container {
+#head-container {
   width: 100%;
   padding: 20px;
 
@@ -29,37 +29,37 @@ header {
   justify-content: space-between;
 }
 
-.img-logo {
+#img-logo {
   width: 100px;
 }
 
-.menu {
+#menu {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
 }
 
-.headerGD {
+#headerGD {
   display: flex;
 }
 
-.headerD {
+#headerD {
   padding: 10px;
 
   align-items: center;
 }
 
-a {
+#menu a {
   color: white;
   text-decoration: none;
 }
 
-.menu li {
+#menu li {
   padding: 20px;
   font-size: 30px;
 }
 
-h1 {
+#h1 {
   text-align: center;
   font-size: 80px;
   color: white;
@@ -69,19 +69,19 @@ h1 {
 
 /*****SUBHEAD***/
 
-.subHead {
+#subHead {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.button-headG,
-.button-headD {
+#button-headG,
+#button-headD {
   display: flex;
   padding: 30px;
 }
 
-.btn {
+#btn {
   background: black;
   color: white;
   padding: 15px 48px;
@@ -90,7 +90,7 @@ h1 {
   font-weight: 700;
 }
 
-.speach {
+#speach {
   font-size: 40px;
   color: white;
   text-align: center;
@@ -107,9 +107,9 @@ footer {
   width: 100%;
 }
 
-.container-footer,
-.nav-footer,
-.copyright {
+#container-footer,
+#nav-footer,
+#copyright {
   width: 100%;
   padding: 20px;
 
@@ -120,24 +120,34 @@ footer {
   align-items: center;
 }
 
-.logo_footer {
+#logo_footer {
   padding-top: 20px;
 }
 
-.navbar li {
+#navbar li {
   padding: 10px;
   font-size: 30px;
 }
 
-.navbar {
+#navbar {
   display: flex;
   list-style-type: none;
 }
+#navbar a {
+  color: white;
+  text-decoration: none;
+}
 
-.copy {
+#copy {
   font-size: 20px;
   color: white;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 10px;
+}
+
+/**BODY HOMEPAGE*/
+
+#containerBodyHome {
+  background-color: #4d2913;
 }

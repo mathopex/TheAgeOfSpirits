@@ -4,36 +4,53 @@
 
 {% block body %}
 <body>
+    <div class="containerBodyHome">
+        <div class="histoire">
+            <h2>Histoire du jeu</h2>
+            <div class="image-histoire">
+                <img src="{{asset('images/fond/histoire.png')}}" alt="histoire du jeu">
+            </div>
+        </div>  
 
-    <div class="container-histoire">
-        <h2>Histoire du jeu</h2>
-        <div class="image-histoire">
-            <img src="{{asset('images/fond/histoire.png')}}" alt="histoire du jeu">
+        <div class="container-perso">
+            <h2>Nos personnages</h2>
+            <div class="container-cards">
+                <div class="cardgood">
+                    <img src="{{asset('images/cards/cardsFemmeGood/cards_archerF.png')}}" alt="archer femme good">
+                    <img src="{{asset('images/cards/cardsFemmeGood/cards_barbareF.png')}}" alt="barbare femme good">
+                    <img src="{{asset('images/cards/cardsFemmeGood/cards_moineF.png')}}" alt="moine femme good">
+                    <img src="{{asset('images/cards/cardsHommeGood/cards_archerH.png')}}" alt="archer Homme good">
+                    <img src="{{asset('images/cards/cardsHommeGood/cards_barbareH.png')}}" alt="barbare Homme good">
+                    <img src="{{asset('images/cards/cardsHommeGood/cards_moineH.png')}}" alt="moine Homme good">
+                </div>
+                <div class="cardsbad">
+                        <img src="{{asset('images/cards/cardsFemmeBad/cards_archerF_MAL.png')}}" alt="archer femme bad">
+                        <img src="{{asset('images/cards/cardsFemmeBad/cards_barbareF_MAL.png')}}" alt="barbare femme bad">
+                        <img src="{{asset('images/cards/cardsFemmeBad/cards_moineF_MAL.png')}}" alt="moine femme bad">
+                        <img src="{{asset('images/cards/cardsHommeBad/cards_archerH_MAL.png')}}" alt="archer Homme bad">
+                        <img src="{{asset('images/cards/cardsHommeBad/cards_barbareH_MAL.png')}}" alt="barbare Homme bad">
+                        <img src="{{asset('images/cards/cardsHommeBad/cards_moineH_MAL.png')}}" alt="moine Homme bad">
+                </div>
+            </div>
         </div>
-   </div>
-
-   <div class="container-perso">
-       <h2>Nos personnages</h2>
-       <div class="container-cards">
-           <div class="cardgood">
-               <img src="{{asset('images/cards/cardsFemmeGood/cards_archerF.png')}}" alt="archer femme good">
-               <img src="{{asset('images/cards/cardsFemmeGood/cards_barbareF.png')}}" alt="barbare femme good">
-               <img src="{{asset('images/cards/cardsFemmeGood/cards_moineF.png')}}" alt="moine femme good">
-               <img src="{{asset('images/cards/cardsHommeGood/cards_archerH.png')}}" alt="archer Homme good">
-               <img src="{{asset('images/cards/cardsHommeGood/cards_barbareH.png')}}" alt="barbare Homme good">
-               <img src="{{asset('images/cards/cardsHommeGood/cards_moineH.png')}}" alt="moine Homme good">
-           </div>
-           <div class="cardsbad">
-            <img src="{{asset('images/cards/cardsFemmeBad/cards_archerF_MAL.png')}}" alt="archer femme bad">
-            <img src="{{asset('images/cards/cardsFemmeBad/cards_barbareF_MAL.png')}}" alt="barbare femme bad">
-            <img src="{{asset('images/cards/cardsFemmeBad/cards_moineF_MAL.png')}}" alt="moine femme bad">
-            <img src="{{asset('images/cards/cardsHommeBad/cards_archerH_MAL.png')}}" alt="archer Homme bad">
-            <img src="{{asset('images/cards/cardsHommeBad/cards_barbareH_MAL.png')}}" alt="barbare Homme bad">
-            <img src="{{asset('images/cards/cardsHommeBad/cards_moineH_MAL.png')}}" alt="moine Homme bad">
-            
-           </div>
-
-       </div>
-   </div>
+        <div class="containerIllustration">
+                <img src="{{asset('images/fond/bg-frontpage.jpg')}}" alt="illustation site">
+        </div>
+        <div class="container-news"></div>
+        <div class="container-stats">
+            <div class="cardsstats">
+                <div class="title-stats"><p>Stats du site</p></div> 
+                <div class="subtittle"><p>Classement</p></div>
+            <div class="classement">
+                <ol>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ol>
+            </div>    
+        </div>
+    </div>
 </body>
 {% endblock %}
