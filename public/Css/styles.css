@@ -1,23 +1,23 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  @font-face {
-    font-family: ;
-    src: url();
-  }
-}
+/** {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  box-sizing: border-box;*/
+/*  @font-face {*/
+/*    font-family: ;*/
+/*    src: url();*/
+/*  }*/
+/*}*/
 
 /*******HEADER*****/
-html {
-  font-size: 16px;
-}
+/*html {*/
+/*  font-size: 16px;*/
+/*}*/
 
 header {
   background-image: url(../images/fond/bg_head.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 650px;
+  /*height: 650px;*/
   width: 100%;
 }
 #head-container {

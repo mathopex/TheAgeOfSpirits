@@ -9,8 +9,16 @@ footer {
 }
 
 /******body******/
-#bg {
+body {
   background-color: #174f68;
+}
+
+label {
+  color: white;
+}
+.form-control, .form-control:focus {
+  background-color: transparent;
+  color: white;
 }
 
 #h1-inscription {

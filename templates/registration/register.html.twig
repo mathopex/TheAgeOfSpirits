@@ -1,13 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-{{parent()}}
-
-<link rel="stylesheet" href="{{ asset('css/styles-inscription.css') }}">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
-{% endblock %} 
+    {{parent()}}
+    <link rel="stylesheet" href="{{ asset('css/styles-inscription.css') }}">
+{% endblock %}
 
 {% block title  %}Inscription{% endblock %}
 
@@ -15,8 +11,7 @@
 
 {% block body %}
 
-<div class="row" id="bg">
-    <div class="col-md-6 mx-auto">
+<div id="bg">
 
         <h1 id="h1-inscription">Inscription</h1>
 
@@ -50,7 +45,6 @@
         <button type="submit">Créer son compte</button>
         {{ form_end(form) }}
 
-    </div>
 </div>
 
 {% endblock %}
