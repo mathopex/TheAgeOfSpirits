@@ -23,11 +23,7 @@ label {
   color: white;
 }
 
-#h1-inscription {
-  color: #94cde8;
-}
-
-#btn-inscription {
+#btn-connexion {
   background-color: #4d2913;
   color: white;
   padding: 8px 20px;
@@ -39,6 +35,10 @@ label {
 #bg {
   padding-bottom: 40px;
   padding-top: 40px;
+}
+
+#h1-connexion {
+  color: #94cde8;
 }
 
 #registration_form_password_first_help {

@@ -43,6 +43,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $address;
 
     #[ORM\Column(type: 'string', length: 255)]
+    private $postCode;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $city;
+
+    #[ORM\Column(type: 'string', length: 255)]
     private $phone_number;
 
     #[ORM\Column(type: 'string', length: 180, unique: true)]
@@ -122,6 +128,28 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setAddress(string $address): self
     {
         $this->address = $address;
+
+        return $this;
+    }
+    public function getPostCode(): ?string
+    {
+        return $this->postCode;
+    }
+
+    public function setPostCode(string $postCode): self
+    {
+        $this->postCode = $postCode;
+
+        return $this;
+    }
+    public function getCity(): ?string
+    {
+        return $this->city;
+    }
+
+    public function setCity(string $city): self
+    {
+        $this->city = $city;
 
         return $this;
     }
