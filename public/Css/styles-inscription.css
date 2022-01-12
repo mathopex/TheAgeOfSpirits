@@ -1,0 +1,18 @@
+header {
+  background-image: url(../images/fond/bg_headerblue.jpg);
+}
+
+/****FOOTER****/
+
+footer {
+  background-image: url(../images/fond/bgfooterblue.jpg);
+}
+
+/******body******/
+#bg {
+  background-color: #174f68;
+}
+
+#h1-inscription {
+  color: palegreen;
+}
