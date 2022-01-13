@@ -1,65 +1,65 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    {{parent()}}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+
 {% block title %}Création Personnage !{% endblock %}
 
 {% block body %}
+<body id="bg-create-personnage">
+    <div id="create-personnage-padding">
+        <h1 id="h1-create-personnage">Création Personnage</h1>
 
-<h1>Création Personnage</h1>
+            {{ form_start(form) }}
 
-<div>
-    {{ form_start(form) }}
-        <div class="pseudo">
+                    {{ form_row(form.pseudo) }}
 
-            {{ form_row(form.pseudo) }}
-            <br><br>
-        </div>
-        <div class="class">
+                <div class="row">
+                    <div class="col-md-6">
+                        {{ form_row(form.class) }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form_row(form.clan) }}
+                    </div>
+                </div>    
 
-            {{ form_row(form.class) }}
-            <br><br>
-        </div>
-        <div class="clan">
+                    {{ form_row(form.sex) }}
+                    
+                <div class="row">
+                    <div class="col-md-6">
+                        {{ form_row(form.height) }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form_row(form.weight) }} 
+                    </div>
+                </div>    
+                <div class="row">
+                    <div class="col-md-6">
+                        {{ form_row(form.health) }}    
+                    </div>
+                    <div class="col-md-6">
+                        {{ form_row(form.attack) }}   
+                    </div>
+                </div>
 
-            {{ form_row(form.clan) }}
-            <br><br>
-        </div>
-        <div class="sex">
+                    {{ form_row(form.defense) }}
+                
 
-            {{ form_row(form.sex) }}
-            <br><br>
-        </div>
-        <div class="height">
-
-            {{ form_row(form.height) }}
-            <br><br>
-        </div>
-        <div class="weight">
-
-            {{ form_row(form.weight) }}
-            <br><br>
-        </div>
-        <div class="health">
-
-            {{ form_row(form.health) }}
-            <br><br>
-        </div>
-        <div class="attack">
-
-            {{ form_row(form.attack) }}
-            <br><br>
-        </div>
-        <div class="defense">
-
-            {{ form_row(form.defense) }}
-            <br><br>
-        </div>
-        <div class="specialitisetvalue">
-            {{ form_row(form.specialitis) }}
-            {{ form_row(form.specialitis_value) }}
-            <br><br>
-        </div>
-            <button class="btn-inscription" type="submit">Valider</button>
-    {{ form_end(form) }}<br><br>
-</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        {{ form_row(form.specialitis) }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form_row(form.specialitis_value) }}
+                    </div>
+                </div>
+                    <button class="btn-inscription" type="submit" id="btn-create-personnage">Valider</button>
+            {{ form_end(form) }}<br><br>
+    
+    </div>
+</body>
 {% endblock %}
 

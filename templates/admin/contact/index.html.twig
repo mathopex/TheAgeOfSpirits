@@ -1,42 +1,51 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactController!{% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+
+{% block title %}Gestion Contact{% endblock %}
 
 {% block body %}
-    <form method="GET">
-            <div>
-                <input type="text" name="q" value="{{ app.request.query.get('q') }}" placeholder="Recherche..." aria-label="Recherche..." aria-describedby="button-addon2">
-                <button type="submit" id="button-addon2">Rechercher</button>
-            </div>
-        </form>
-
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Date</th>
-                    <th>Motif</th>
-                    <th>Message</th>
-                    <th>Email</th>
-                    <th>Supprimer</th>
-                    <th>Voir</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for contact in contacts %}
+<body id="bg-gestionnaire-conctact">
+    <div id="gestionnaire-contact-padding">
+        <h1 id="h1-gestionnaire-contact">BIENVENUE DANS LA GESTION DES CONCTACTS</h1>
+            <form method="GET">
+                    <div>
+                        <input type="text" name="q" value="{{ app.request.query.get('q') }}" placeholder="Recherche..." aria-label="Recherche..." aria-describedby="button-addon2">
+                        <button type="submit" id="btn-gestionnaire-contact">Rechercher</button>
+                    </div>
+            </form>
+            <table class="table table-striped" id="table-gestionnaire-contact">
+                <thead>
                     <tr>
-                        <td>{{ contact.id }}</td>
-                        <td>{{ contact.createdAt|date('d/m/Y') }}</td>
-                        <td>{{ contact.Motif }}</td>
-                        <td>{{ contact.Message|ellipsis }}</td>
-                        <td>{{ contact.Email }}</td>
-                        <td>
-                            <a href="{{ path('admin_contact_delete', {id: contact.id}) }}" class="btn btn-sm btn-danger me-2">Supprimer</a>
-                            <a href="{{ path('admin_contact_view', {id: contact.id}) }}" class="btn btn-sm btn-primary">Voir</a>
-                        </td>
-                
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Motif</th>
+                        <th>Message</th>
+                        <th>Email</th>
+                        <th>Supprimer</th>
+                        <th>Voir</th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+                </thead>
+                    <tbody>
+                        {% for contact in contacts %}
+                            <tr>
+                                <td>{{ contact.id }}</td>
+                                <td>{{ contact.createdAt|date('d/m/Y') }}</td>
+                                <td>{{ contact.Motif }}</td>
+                                <td>{{ contact.Message|ellipsis }}</td>
+                                <td>{{ contact.Email }}</td>
+                                <td>
+                                    <a href="{{ path('admin_contact_delete', {id: contact.id}) }}" class="btn btn-sm btn-danger me-2">Supprimer</a>
+                                    <a href="{{ path('admin_contact_view', {id: contact.id}) }}" class="btn btn-sm btn-primary">Voir</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+            </table>
+    </div>
+</body> 
 {% endblock %}

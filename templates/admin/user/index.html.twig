@@ -1,45 +1,55 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DashboardController!{% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+
+{% block title %}Gestionnaire des utilisateurs{% endblock %}
 
 {% block body %}
-
-<h1>BIENCENUE DANS LA GESTION DES UTILISATEURS</h1>
-
-
- <form method="GET">
-        <div>
-            <input type="text" name="q" value="{{ app.request.query.get('q') }}" placeholder="Recherche..." aria-label="Recherche..." aria-describedby="button-addon2">
-            <button type="submit" id="button-addon2">Rechercher</button>
-        </div>
-    </form>
-
-<table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Civilité</th>
-                <th>Adresse</th>
-                <th>Numero de tel</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for user in users %}
-                <tr>
-                    <td>{{ user.id}}</td>
-                    <td>{{ user.name}}</td>
-                    <td>{{ user.firstname }}</td>
-                    <td>{{ user.civility}}</td>
-                    <td>{{ user.address}}</td>
-                    <td>{{ user.phoneNumber}}</td>
-                    <td>{{ user.email}}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<body id="bg-gestionnaire">
+    <div id="gestionnaire-padding"> 
+        <h1 id="h1-gestionnaire">BIENVENUE DANS LA GESTION DES UTILISATEURS</h1>
+            <form method="GET">
+                <div>
+                    <input type="text" name="q" value="{{ app.request.query.get('q') }}" placeholder="Recherche..." aria-label="Recherche..." aria-describedby="button-addon2">
+                    <button type="submit" id="btn-gestionnaire">Rechercher</button>
+                </div>
+            </form>
+            <table class="table table-striped" id="table-gestionnaire">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Civilité</th>
+                            <th>Adresse</th>
+                            <th>Code Postal</th>
+                            <th>Ville</th>
+                            <th>Numero de tel</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in users %}
+                            <tr>
+                                <td>{{ user.id}}</td>
+                                <td>{{ user.name}}</td>
+                                <td>{{ user.firstname }}</td>
+                                <td>{{ user.civility}}</td>
+                                <td>{{ user.address}}</td>
+                                <td>{{ user.postCode}}</td>
+                                <td>{{ user.city}}</td>
+                                <td>{{ user.phoneNumber}}</td>
+                                <td>{{ user.email}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </body>
 {% endblock %}

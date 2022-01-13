@@ -149,8 +149,29 @@ footer {
 
 /**BODY HOMEPAGE*/
 
-#containerBodyHome {
+#container-body {
   background-color: #4d2913;
+}
+/**Container Histoire**/
+#h2-histoire {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+/**Container Personnages**/
+#container-perso {
+  width: 1700px;
+}
+
+#h2-perso {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#cardgood {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 /**contact*/
@@ -190,3 +211,156 @@ label {
   padding-bottom: 40px;
   padding-top: 40px;
 }
+
+/**Gestionnaire des utilisateurs**/
+
+label {
+  color: white;
+}
+.form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: white;
+}
+
+#h1-gestionnaire {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#bg-gestionnaire {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+#table-gestionnaire {
+  color: white;
+  font-size: 20px;
+}
+
+#btn-gestionnaire {
+  background-color: #d6bf55;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+#gestionnaire-contact-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+/**Gestion des contacts**/
+
+label {
+  color: white;
+}
+.form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: white;
+}
+
+#h1-gestionnaire-contact {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#bg-gestionnaire-conctact {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+#table-gestionnaire-contact {
+  color: white;
+  font-size: 20px;
+}
+
+#btn-gestionnaire-contact {
+  background-color: #d6bf55;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+#gestionnaire-contact-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+/**Espace Membre**/
+
+label {
+  color: white;
+}
+.form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: white;
+}
+
+#h1-espace-membre {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#bg-espace-membre {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+#p-espace-membre {
+  color: white;
+  font-size: 20px;
+}
+
+/**#btn-espace-membre {
+  background-color: #d6bf55;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 500;
+}**/
+
+#espace-membre-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+/**Création Page**/
+
+label {
+  color: white;
+}
+.form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: white;
+}
+
+#h1-create-personnage {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#bg-create-personnage {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+
+#btn-create-personnage {
+  background-color: #d6bf55;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+#create-personnage-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+

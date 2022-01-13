@@ -1,21 +1,25 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    {{parent()}}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
 {% block title %}{% endblock %}
 
 {% block body %}
-<body>
-    <div class="containerBodyHome">
-        <div class="histoire">
-            <h2>Histoire du jeu</h2>
-            <div class="image-histoire">
+<body id="container-body">
+    <div id="containerBodyHome">
+        <div id="histoire">
+            <h2 id="h2-histoire">Histoire du jeu</h2>
+            <div id="image-histoire">
                 <img src="{{asset('images/fond/histoire.png')}}" alt="histoire du jeu" class="w-100">
             </div>
         </div>
-
-        <div class="container-perso">
-            <h2>Nos personnages</h2>
-            <div class="container-cards">
-                <div class="cardgood">
+        <div id="container-perso">
+            <h2 id="h2-perso">Nos personnages</h2>
+            <div id="container-cards">
+                <div id="cardgood">
                     <img src="{{asset('images/cards/cardsFemmeGood/cards_archerF.png')}}" alt="archer femme good">
                     <img src="{{asset('images/cards/cardsFemmeGood/cards_barbareF.png')}}" alt="barbare femme good">
                     <img src="{{asset('images/cards/cardsFemmeGood/cards_moineF.png')}}" alt="moine femme good">
@@ -23,7 +27,7 @@
                     <img src="{{asset('images/cards/cardsHommeGood/cards_barbareH.png')}}" alt="barbare Homme good">
                     <img src="{{asset('images/cards/cardsHommeGood/cards_moineH.png')}}" alt="moine Homme good">
                 </div>
-                <div class="cardsbad">
+                <div id="cardsbad">
                         <img src="{{asset('images/cards/cardsFemmeBad/cards_archerF_MAL.png')}}" alt="archer femme bad">
                         <img src="{{asset('images/cards/cardsFemmeBad/cards_barbareF_MAL.png')}}" alt="barbare femme bad">
                         <img src="{{asset('images/cards/cardsFemmeBad/cards_moineF_MAL.png')}}" alt="moine femme bad">
@@ -33,16 +37,16 @@
                 </div>
             </div>
         </div>
-        <div class="containerIllustration">
+        <div id="containerIllustration">
             <img src="{{asset('images/fond/bg-frontpage.jpg')}}" alt="illustation site">
         </div>
-        <div class="container-news"></div>
-        <div class="container-stats">
-            <div class="cardsstats">
-                <div class="title-stats"><p>Stats du site</p></div>
-                <div class="subtittle"><p>Classement</p></div>
+        <div id="container-news"></div>
+        <div id="container-stats">
+            <div id="cardsstats">
+                <div id="title-stats"><p>Stats du site</p></div>
+                <div id="subtittle"><p>Classement</p></div>
             </div>
-            <div class="classement">
+            <div id="classement">
                 <ol>
                     <li>1</li>
                     <li>2</li>
