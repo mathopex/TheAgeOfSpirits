@@ -54,12 +54,20 @@ header {
   margin-top: 50px;
 }
 
+img {
+  max-width: 100%;
+}
+
 /*****SUBHEAD***/
 
 #subHead {
   width: 100%;
-  display: flex;
   justify-content: center;
+}
+@media (min-width: 768px) {
+  #subHead {
+    display: flex;
+  }
 }
 
 #button-headG,
@@ -118,12 +126,16 @@ footer {
 }
 
 #navbar {
-  display: flex;
   list-style-type: none;
 }
 #navbar a {
   color: white;
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  #navbar {
+    display: flex;
+  }
 }
 
 #copy {
