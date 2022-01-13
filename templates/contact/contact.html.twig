@@ -3,12 +3,12 @@
 {% block title %}Contactez-Nous{% endblock %}
 
 {% block body %}
-
-    <div>
+<body id="bg-contact">
+    <div id="contact-padding">
         <div>
-            <h1>Contactez-Nous</h1>
+            <h1 id="h1-contact">Contactez-Nous</h1>
 
-            <p>Nous vous répondrons sous 24 heures.</p>
+            <p id="p-contact">Nous vous répondrons sous 24 heures.</p>
 
             {{ form_start(form) }}
 
@@ -17,11 +17,13 @@
                 {{ form_row(form.message) }}
 
             <div>
-                <button type="submit">Envoyer</button>
+                <button type="submit"id="btn-send">Envoyer</button>
             </div>
 
             {{ form_end(form) }}
         </div>
     </div>
 
+</body>
+    
 {% endblock %}

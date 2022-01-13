@@ -1,26 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  @font-face {
-    font-family: ;
-    src: url();
-  }
-}
+/** {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  box-sizing: border-box;*/
+/*  @font-face {*/
+/*    font-family: ;*/
+/*    src: url();*/
+/*  }*/
+/*}*/
 
 /*******HEADER*****/
-html {
-  font-size: 16px;
-}
+/*html {*/
+/*  font-size: 16px;*/
+/*}*/
 
 header {
   background-image: url(../images/fond/bg_head.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 650px;
+  /*height: 650px;*/
   width: 100%;
 }
-.head-container {
+#head-container {
   width: 100%;
   padding: 20px;
 
@@ -29,37 +29,37 @@ header {
   justify-content: space-between;
 }
 
-.img-logo {
+#img-logo {
   width: 100px;
 }
 
-.menu {
+#menu {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
 }
 
-.headerGD {
+#headerGD {
   display: flex;
 }
 
-.headerD {
+#headerD {
   padding: 10px;
 
   align-items: center;
 }
 
-a {
+#menu a {
   color: white;
   text-decoration: none;
 }
 
-.menu li {
+#menu li {
   padding: 20px;
-  font-size: 30px;
+  font-size: 25px;
 }
 
-h1 {
+#h1 {
   text-align: center;
   font-size: 80px;
   color: white;
@@ -69,32 +69,33 @@ h1 {
 
 /*****SUBHEAD***/
 
-.subHead {
+#subHead {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.button-headG,
-.button-headD {
+#button-headG,
+#button-headD {
   display: flex;
   padding: 30px;
 }
 
-.btn {
+#btn {
   background: black;
   color: white;
-  padding: 15px 48px;
+  padding: 10px 40px;
   border-radius: 20px;
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 500;
 }
 
-.speach {
-  font-size: 40px;
+#speach {
+  font-size: 25px;
   color: white;
   text-align: center;
   padding-top: 50px;
+  padding-bottom: 40px;
 }
 
 /****FOOTER****/
@@ -107,9 +108,9 @@ footer {
   width: 100%;
 }
 
-.container-footer,
-.nav-footer,
-.copyright {
+#container-footer,
+#nav-footer,
+#copyright {
   width: 100%;
   padding: 20px;
 
@@ -120,24 +121,72 @@ footer {
   align-items: center;
 }
 
-.logo_footer {
+#logo_footer {
   padding-top: 20px;
 }
 
-.navbar li {
+#navbar li {
   padding: 10px;
-  font-size: 30px;
+  font-size: 25px;
 }
 
-.navbar {
+#navbar {
   display: flex;
   list-style-type: none;
 }
+#navbar a {
+  color: white;
+  text-decoration: none;
+}
 
-.copy {
+#copy {
   font-size: 20px;
   color: white;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 10px;
+}
+
+/**BODY HOMEPAGE*/
+
+#containerBodyHome {
+  background-color: #4d2913;
+}
+
+/**contact*/
+label {
+  color: white;
+}
+.form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: white;
+}
+
+#h1-contact {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#bg-contact {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+#p-contact {
+  color: white;
+  font-size: 20px;
+}
+
+#btn-send {
+  background-color: #d6bf55;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+#contact-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
