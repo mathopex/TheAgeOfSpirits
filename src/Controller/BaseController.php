@@ -24,6 +24,6 @@ class BaseController extends AbstractController
     #[Route('/combat', name: 'fight_page')]
     public function fight(): Response
     {
-        return $this->render('base/homePage.html.twig');
+        return $this->render('appUnity/index.html');
     }
 }

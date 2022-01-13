@@ -58,7 +58,7 @@ class DashboardController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'admin_contact_view')]
+    #[Route('#{id}', name: 'admin_contact_view')]
     public function view(Contact $contact): Response
     {
         return $this->render('admin/contact/view.html.twig', [
