@@ -35,28 +35,15 @@ header {
 
 #menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: end;
   list-style-type: none;
-}
-
-#headerGD {
-  display: flex;
-}
-
-#headerD {
-  padding: 10px;
-
-  align-items: center;
 }
 
 #menu a {
   color: white;
   text-decoration: none;
-}
-
-#menu li {
-  padding: 20px;
-  font-size: 25px;
+  font-size: 20px;
+  padding-left: 70px;
 }
 
 #h1 {
