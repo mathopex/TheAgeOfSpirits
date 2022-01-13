@@ -159,9 +159,6 @@ footer {
 }
 
 /**Container Personnages**/
-#container-perso {
-  width: 1700px;
-}
 
 #h2-perso {
   color: #d6bf55;
@@ -363,4 +360,3 @@ label {
   padding-bottom: 40px;
   padding-top: 40px;
 }
-
