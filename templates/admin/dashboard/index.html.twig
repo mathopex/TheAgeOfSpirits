@@ -1,15 +1,45 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+{{parent()}}
+<link rel="stylesheet" href="{{ asset('css/styles-admin.css') }}">
+{% endblock %} 
 
-{% block title %}Hello DashboardController!{% endblock %}
+{% block title %}Bienvenue dans l'admin{% endblock %}
 
 {% block body %}
+<body id="body-admin">
+    <h1 id="h1-color">ESPACE ADMIN</h1>
 
-    <h1>ESPACE ADMIN</h1>
 
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="card-persos">
+        <div class="col">
+            <div class="h-100" id="">
+                <a href="{{path('user_gestion')}}"><img src="{{asset('images/cards/cards_admin/cards_gestion_utilisateurs.png')}}" class="card-img-top" alt="cards gestion utilisateurs"></a>
+                </code>  
+            </div>
+        </div>
+        <div class="col">
+            <div class="h-100" id="">
+                <a href="{{path('contact_gestion')}}"><img src="{{asset('images/cards/cards_admin/cards_gestion_contacts.png')}}" class="card-img-top" alt="cards gestion contact"></a>
+                </code>  
+            </div>
+        </div>
+        <div class="col">
+            <div class="h-100" id="">
+                <a href="#"><img src="{{asset('images/cards/cards_admin/cards_gestion_chat.png')}}" class="card-img-top" alt="cards gestion chat"></a>
+                </code>  
+            </div>
+        </div>
+        
+        
+    </div>
+    <div id="banderole">
+        <div id="image-banderole">
+            <img src="{{asset('images/fond/banderole-admin.jpg')}}" alt="illustration banderole" class="w-100">
+        </div>
+    </div>
+  
 
-    <ul>
-        <li>Gestion des utilisateur <a href="{{path('user_gestion')}}">Voir</a></code></li>
-        <li>Gestion des contacts<a href="{{path('contact_gestion')}}">Voir</a></li>
-    </ul>
-
+</body>
+    
 {% endblock %}
