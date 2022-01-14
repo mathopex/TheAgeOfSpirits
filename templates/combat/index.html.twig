@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CombatController!{% endblock %}
+
+
+
+{% block body %}
+
+<table >
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>niveau</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        {% for perso in persos %}
+                            <tr>
+                                <td>{{ perso.pseudo }}</td>
+                                <td>{{ perso.niveau}}</td>
+                                <td>
+                                   <a href="{{ path('attente',{id: combat.id}) }}" class="btn btn-sm btn-primary">Demande de Combat</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+            </table>
+{% endblock %}
+
