@@ -15,6 +15,11 @@ class CombatController extends AbstractController
 
         $persos = $persoRepository->findBy([],['id'=> 'DESC']);
 
+        // REQUET SQL : SUR CETTE PAGE ON AFFICHE LE NOM DES JOUEURS CONNECTE + LEUR NIVEAU EN FONCTION
+        // DU NIVEAU DU JOUEUR ACTUEL 
+
+        
+
         return $this->render('combat/index.html.twig', [
             'persos' => $persos,
         ]);
