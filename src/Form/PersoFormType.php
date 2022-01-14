@@ -51,42 +51,6 @@ class PersoFormType extends AbstractType
                     'NonBinaire' => 'Non Binaire'
                 ]
             ])
-
-            ->add('height', TextType::class,
-            [
-                'label' => "Votre taille",
-            ])
-
-            ->add('weight', TextType::class,
-            [
-                'label' => "Votre poids",
-            ])
-
-            ->add('health', TextType::class, 
-            [
-                'label' => "Votre vie",
-            ])
-
-            ->add('attack', TextType::class,
-            [
-                'label' => "Votre attaque",
-            ])
-
-            ->add('defense', TextType::class,
-            [
-                'label' => "Votre défense",
-            ])
-
-            ->add('specialitis', TextType::class,
-            [
-                'label' => "Votre Spécialité",
-            ])
-
-            ->add('specialitis_value', TextType::class,
-            [
-                'label' => "Votre valeur de spécialité",
-            ])
-
         ;
     }
 
