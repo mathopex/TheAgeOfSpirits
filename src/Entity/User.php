@@ -60,6 +60,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string')]
     private $password;
 
+    #[ORM\OneToOne(targetEntity: Perso::class)]
+    #[ORM\JoinColumn(nullable: true)]
+    private ?Perso $Perso = null;
+
     #[ORM\Column(type: 'string', length: 255)]
     private $status = self::STATUS_PENDING_EMAIL_VERIFICATION;
 
