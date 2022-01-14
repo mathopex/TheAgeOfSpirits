@@ -19,7 +19,7 @@ class Perso
     #[ORM\Column(type: 'string', length: 255)]
     private $pseudo;
 
-    #[ORM\Column(type: 'string', length: 255,nullable: true)]
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $niveau;
 
     #[ORM\Column(type: 'string', length: 255)]
@@ -31,11 +31,17 @@ class Perso
     #[ORM\Column(type: 'string', length: 255)]
     private $sex;
 
-    // #[ORM\Column(type: 'float')]
-    // private $height;
+    //#[ORM\ManyToOne(targetEntity: Combat::class)]
+    //#[ORM\JoinColumn(nullable: true)]
+    #[ORM\Column(type: 'integer')]
+    private $nbVictoire;
 
-    // #[ORM\Column(type: 'float')]
-    // private $weight;
+    #[ORM\ManyToOne(targetEntity: Combat::class)]
+    #[ORM\JoinColumn(nullable: true)]
+    private $nbDefaite;
+
+
+
 
     // #[ORM\Column(type: 'integer')]
     // private $health;
@@ -118,29 +124,31 @@ class Perso
         return $this;
     }
 
-    public function getHeight(): ?float
+    public function getNbVictoire(): ?float
     {
-        return $this->height;
+        return $this->nbVictoire;
     }
 
-    public function setHeight(float $height): self
+    public function setNbVictoire(float $nbVictoire): self
     {
-        $this->height = $height;
+        $this->nbVictoire = $nbVictoire;
 
         return $this;
     }
 
-    public function getWeight(): ?float
+    public function getNbDefaite(): ?float
     {
-        return $this->weight;
+        return $this->nbDefaite;
     }
 
-    public function setWeight(float $weight): self
+    public function setNbDefaite(float $nbDefaite): self
     {
-        $this->weight = $weight;
+        $this->nbDefaite = $nbDefaite;
 
         return $this;
     }
+
+
 
     public function getHealth(): ?int
     {

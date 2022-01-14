@@ -16,14 +16,17 @@ use Symfony\Component\Routing\Annotation\Route;
 class CombatController extends AbstractController
 {
     #[Route('/combat', name: 'combat')]
-    public function index(PersoRepository $persoRepository, Request $request, CombatRepository $combatRepository,
-                            EntityManagerInterface $entityManager): Response
-    {
+    public function index(
+        PersoRepository $persoRepository,
+        Request $request,
+        CombatRepository $combatRepository,
+        EntityManagerInterface $entityManager
+    ): Response {
 
-        $persos = $persoRepository->findBy([],['id'=> 'DESC']);
+        $persos = $persoRepository->findBy([], ['id' => 'DESC']);
 
         $combat = new Combat();
-        $combat -> setCreatedAt(new DateTimeImmutable());
+        $combat->setCreatedAt(new DateTimeImmutable());
         $combat->setUserDemande($this->getUser());
         //$combat->setUserReception();
         $entityManager->persist($combat);

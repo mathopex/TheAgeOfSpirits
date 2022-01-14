@@ -161,13 +161,13 @@
 					</div>
 					<div id="subtitle-home">
 						<p id="classement-stat-home">Classement joueur</p>
+
 					</div>
 					<ol id="nbr-stat-home">
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+						{% for perso in persos %}
+							<li>{{perso.nbVictoire}}</li>
+						{% endfor %}
+
 					</ol>
 				</div>
 			</div>
