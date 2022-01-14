@@ -14,7 +14,7 @@ class BaseController extends AbstractController
         return $this->render('base/preHomePage.html.twig');
     }
 
-    #[Route('/home', name: 'home_page')]
+    #[Route('/accueil', name: 'home_page')]
     public function home(): Response
     {
         return $this->render('base/homePage.html.twig');

@@ -16,43 +16,152 @@
                 <img src="{{asset('images/fond/histoire.png')}}" alt="histoire du jeu" class="w-100">
             </div>
         </div>
-        <div id="container-perso">
-            <h2 id="h2-perso">Nos personnages</h2>
-            <div id="container-cards">
-                <div id="cardgood">
-                    <img src="{{asset('images/cards/cardsFemmeGood/cards_archerF.png')}}" alt="archer femme good">
-                    <img src="{{asset('images/cards/cardsFemmeGood/cards_barbareF.png')}}" alt="barbare femme good">
-                    <img src="{{asset('images/cards/cardsFemmeGood/cards_moineF.png')}}" alt="moine femme good">
-                    <img src="{{asset('images/cards/cardsHommeGood/cards_archerH.png')}}" alt="archer Homme good">
-                    <img src="{{asset('images/cards/cardsHommeGood/cards_barbareH.png')}}" alt="barbare Homme good">
-                    <img src="{{asset('images/cards/cardsHommeGood/cards_moineH.png')}}" alt="moine Homme good">
+        <!-- 1 ligne de card perso -->
+        <h2 id="h2-perso">Nos personnages</h2>
+        <h3 id="h3-perso-humain">Clan Humain</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="card-persos">
+            <div class="col">
+                <h5 class="card-title" id="card-title-perso">Archer Femme</h5>
+              <div class="card h-100" id="h-100">
+                <img src="{{asset('images/cards/cardsFemmeGood/cards_archerF.png')}}" class="card-img-top" alt="archer femme good" id="card-img-perso">
+                <div class="card-body" id="card-body-perso">
+                  <p class="card-text"></p>
                 </div>
-                <div id="cardsbad">
-                        <img src="{{asset('images/cards/cardsFemmeBad/cards_archerF_MAL.png')}}" alt="archer femme bad">
-                        <img src="{{asset('images/cards/cardsFemmeBad/cards_barbareF_MAL.png')}}" alt="barbare femme bad">
-                        <img src="{{asset('images/cards/cardsFemmeBad/cards_moineF_MAL.png')}}" alt="moine femme bad">
-                        <img src="{{asset('images/cards/cardsHommeBad/cards_archerH_MAL.png')}}" alt="archer Homme bad">
-                        <img src="{{asset('images/cards/cardsHommeBad/cards_barbareH_MAL.png')}}" alt="barbare Homme bad">
-                        <img src="{{asset('images/cards/cardsHommeBad/cards_moineH_MAL.png')}}" alt="moine Homme bad">
-                </div>
+              </div>
             </div>
-        </div>
-        <div id="containerIllustration">
+            <div class="col">
+                <h5 class="card-title" id="card-title-perso">Barbare Femme</h5>
+              <div class="card h-100" id="h-100">
+                <img src="{{asset('images/cards/cardsFemmeGood/cards_barbareF.png')}}" class="card-img-top" alt="barbare femme good" id="card-img-perso">
+                <div class="card-body" id="card-body-perso">
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <h5 class="card-title" id="card-title-perso">Moine Femme</h5>
+              <div class="card h-100" id="h-100">
+                <img src="{{asset('images/cards/cardsFemmeGood/cards_moineF.png')}}" class="card-img-top" alt="moine femme good" id="card-img-perso">
+                <div class="card-body" id="card-body-perso">
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2eme ligne de card perso -->
+          <div class="row row-cols-1 row-cols-md-3 g-4" id="card-persos">
+            <div class="col">
+              <div class="card h-100" id="h-100">
+                <img src="{{asset('images/cards/cardsHommeGood/cards_archerH.png')}}" class="card-img-top" alt="archer Homme good" id="card-img-perso">
+                <div class="card-body" id="card-body-perso">
+                  <p class="card-text"></p>
+                  <h5 class="card-title" id="card-title-perso">Archer Homme</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100" id="h-100">
+                <img src="{{asset('images/cards/cardsHommeGood/cards_barbareH.png')}}" class="card-img-top" alt="barbare Homme good" id="card-img-perso">
+                <div class="card-body" id="card-body-perso">
+                  <p class="card-text"></p>
+                  <h5 class="card-title" id="card-title-perso">Barbare Homme</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100" id="h-100">
+                <img src="{{asset('images/cards/cardsHommeGood/cards_moineH.png')}}" class="card-img-top" alt="moine Homme good" id="card-img-perso">
+                <div class="card-body" id="card-body-perso">
+                  <p class="card-text"></p>
+                  <h5 class="card-title" id="card-title-perso">Moine Homme</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3eme ligne de card perso -->
+          <h3 id="h3-perso-esprit">Clan Esprits</h3>
+          <div class="row row-cols-1 row-cols-md-3 g-4" id="card-persos">
+            <div class="col">
+                <h5 class="card-title" id="card-title-perso">Archer Esprit Femme</h5>
+              <div class="card h-100" id="h-100">
+                <img src="{{asset('images/cards/cardsFemmeBad/cards_archerF_MAL.png')}}" class="card-img-top" alt="archer femme bad" id="card-img-perso">
+                <div class="card-body" id="card-body-perso">
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <h5 class="card-title" id="card-title-perso">Barbare Esprit Femme</h5>
+              <div class="card h-100" id="h-100">
+                <img src="{{asset('images/cards/cardsFemmeBad/cards_barbareF_MAL.png')}}" class="card-img-top" alt="barbare femme bad" id="card-img-perso">
+                <div class="card-body" id="card-body-perso">
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <h5 class="card-title" id="card-title-perso">Moine Esprit Femme</h5>
+              <div class="card h-100" id="h-100">
+                <img src="{{asset('images/cards/cardsFemmeBad/cards_moineF_MAL.png')}}" class="card-img-top" alt="moine femme bad" id="card-img-perso">
+                <div class="card-body" id="card-body-perso">
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 4eme ligne de card perso -->
+          <div class="row row-cols-1 row-cols-md-3 g-4" id="card-persos">
+            <div class="col">
+              <div class="card h-100" id="h-100">
+                <img src="{{asset('images/cards/cardsHommeBad/cards_archerH_MAL.png')}}" class="card-img-top" alt="archer Homme bad" id="card-img-perso">
+                <div class="card-body" id="card-body-perso">
+                  <p class="card-text"></p>
+                  <h5 class="card-title" id="card-title-perso">Archer Esprit Homme</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100" id="h-100">
+                <img src="{{asset('images/cards/cardsHommeBad/cards_barbareH_MAL.png')}}" class="card-img-top" alt="barbare Homme bad" id="card-img-perso">
+                <div class="card-body" id="card-body-perso">
+                  <p class="card-text"></p>
+                  <h5 class="card-title" id="card-title-perso">Barbare Esprit Homme</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100" id="h-100">
+                <img src="{{asset('images/cards/cardsHommeBad/cards_moineH_MAL.png')}}" class="card-img-top" alt="moine Homme bad" id="card-img-perso">
+                <div class="card-body" id="card-body-perso">
+                  <p class="card-text"></p>
+                  <h5 class="card-title" id="card-title-perso">Moine Esprit Homme</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Illustration-->
+          <div id="containerIllustration">
             <img src="{{asset('images/fond/bg-frontpage.jpg')}}" alt="illustation site">
         </div>
-        <div id="container-news"></div>
-        <div id="container-stats">
-            <div id="cardsstats">
-                <div id="title-stats"><p>Stats du site</p></div>
-                <div id="subtittle"><p>Classement</p></div>
+        <!--News-->
+        <h2 id="h2-news-home">News</h2>
+        <div id="container-news-home">
+            <div id="cards-news-home">
+                <div id="title-news-home"><p id="news-home">Quoi de neuf</p></div>
             </div>
-            <div id="classement">
-                <ol>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
+        </div>
+        <!--Stat-->
+        <h2 id="h2-stats-home">Statistique du site</h2>
+        <div id="container-stats-home">
+            <div id="cards-stats-home">
+                <div id="title-stats-home"><p id="stat-home">Stats du site</p></div>
+                <div id="subtitle-home"><p id="classement-stat-home">Classement joueur</p></div>
+                <ol id="nbr-stat-home">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                 </ol>
             </div>
         </div>
