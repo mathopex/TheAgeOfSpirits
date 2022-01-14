@@ -47,9 +47,6 @@
                 <h5 class="card-title" id="card-title-perso">{{ ('perso.class.' ~ perso.class)|trans }} {{ ('perso.sex.' ~ perso.sex)|trans }}</h5>
                 <div class="card h-100" id="h-100">
                     <img src="{{asset(perso.image)}}" class="card-img-top" alt="{{ perso.clan }} {{ perso.class }} {{ perso.sex }}">
-                    <div class="card-body" id="card-body-perso">
-                        <p class="card-text"></p>
-                    </div>
                 </div>
             </div>
         {% endfor %}
