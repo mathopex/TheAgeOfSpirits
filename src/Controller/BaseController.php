@@ -21,7 +21,7 @@ class BaseController extends AbstractController
     }
 
 
-    #[Route('/combat', name: 'fight_page')]
+    #[Route('/combatUnity', name: 'fight_page')]
     public function fight(): Response
     {
         return $this->render('appUnity/index.html');

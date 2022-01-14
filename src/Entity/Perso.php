@@ -20,6 +20,9 @@ class Perso
     private $pseudo;
 
     #[ORM\Column(type: 'string', length: 255)]
+    private $niveau;
+
+    #[ORM\Column(type: 'string', length: 255)]
     private $class;
 
     #[ORM\Column(type: 'string', length: 255)]
@@ -63,6 +66,18 @@ class Perso
     public function setPseudo(string $pseudo): self
     {
         $this->pseudo = $pseudo;
+
+        return $this;
+    }
+
+    public function getNiveau(): ?string
+    {
+        return $this->niveau;
+    }
+
+    public function setniveau(string $niveau): self
+    {
+        $this->niveau = $niveau;
 
         return $this;
     }
