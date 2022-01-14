@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Perso;
+use App\Helper\PersoHelper;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -13,6 +14,7 @@ class PersoFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
+
         $builder
 
             ->add('pseudo', TextType::class,
@@ -23,33 +25,31 @@ class PersoFormType extends AbstractType
             ->add('class', ChoiceType::class,
             [
                 'label' => "Votre class",
-                'choices' =>
-                [
-                    'Barbare' => 'Barbare',
-                    'Archer' => 'Archer',
-                    'Moine' => 'Moine'
-                ]
+                'placeholder' => 'Choisir...',
+                'choices' => array_combine(
+                    array_map(fn(string $x) => "perso.class." . $x, PersoHelper::getClasses()),
+                    PersoHelper::getClasses()
+                )
             ])
 
             ->add('clan', ChoiceType::class,
             [
                 'label' => "Votre clan",
-                'choices' =>
-                [
-                    'Humain' => 'Humain',
-                    'Esprit' => 'Esprit',
-                ]
+                'placeholder' => 'Choisir...',
+                'choices' => array_combine(
+                    array_map(fn(string $x) => "perso.clan." . $x, PersoHelper::getClans()),
+                    PersoHelper::getClans()
+                )
             ])
 
             ->add('sex', ChoiceType::class,
             [
                 'label' => "Votre sex",
-                'choices' =>
-                [
-                    'Homme' => 'Homme',
-                    'Femme' => 'Femme',
-                    'NonBinaire' => 'Non Binaire'
-                ]
+                'placeholder' => 'Choisir...',
+                'choices' => array_combine(
+                    array_map(fn(string $x) => "perso.sex." . $x, PersoHelper::getSexes()),
+                    PersoHelper::getSexes()
+                )
             ])
         ;
     }
