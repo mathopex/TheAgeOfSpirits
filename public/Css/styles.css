@@ -130,6 +130,7 @@ footer {
 
 #navbar {
   list-style-type: none;
+  flex-direction: row-reverse;
 }
 #navbar a {
   color: white;
@@ -361,4 +362,58 @@ label {
 #create-personnage-padding {
   padding-bottom: 40px;
   padding-top: 40px;
+}
+
+/***page règle du jeu***/
+#body-regle {
+  background-color: #4d2913;
+  justify-content: center;
+}
+/**id regle**/
+#h2-regle {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#card-bg {
+  background-image: url(../images/fond/bg_rule.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 100%;
+  height: 100%;
+
+  padding-bottom: 20px;
+  padding-left: 30px;
+}
+
+#h3-regle {
+  color: black;
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+#text-regle {
+  font-family: "MedievalSharp", cursive;
+  padding-left: 5px;
+  font-size: 10px;
+}
+#containerBodyRegle {
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  #h3-regle {
+    font-size: 22px;
+    padding-top: 20px;
+    padding-left: 5px;
+  }
+
+  #text-regle {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  #containerBodyRegle {
+    max-width: 100%;
+    height: auto;
+  }
 }
