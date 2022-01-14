@@ -33,6 +33,11 @@ header {
   width: 100px;
 }
 
+#navbar-light .navbar-toggler {
+  background-color: white;
+  border-color: white;
+}
+
 #menu {
   display: flex;
   justify-content: end;
@@ -73,13 +78,14 @@ img {
   }
 }
 
-#button-headG,
-#button-headD {
+#btn-headG,
+#btn-headD {
   display: flex;
   padding: 30px;
 }
 
-#btn {
+#btn-header-inscription, #btn-header-connexion {
+  
   background: black;
   color: white;
   padding: 10px 40px;
@@ -161,17 +167,148 @@ footer {
   font-family: "MedievalSharp", cursive;
 }
 
+/**Card Perso**/
+
+#card-persos {
+  background-color: #4d2913;
+}
+
+#card-img-perso, .card-img-top {
+  background-color: #4d2913;
+}
+
+#h-100 {
+  border: 0;
+}
+
+#card-title-perso {
+  color: #d6bf55;
+  background-color: #4d2913;
+}
+
+#card-body-perso {
+  background-color: #4d2913 ;
+}
 /**Container Personnages**/
 
 #h2-perso {
   color: #d6bf55;
   font-family: "MedievalSharp", cursive;
 }
+/**Detail card humain**/
+#h3-perso-humain {
+  color:#174f68;
+}
 
-#cardgood {
+#cardsgood {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 0.5rem;
+}
+/**Detail card esprit**/
+
+#h3-perso-esprit {
+  padding-bottom: 20px;
+  color:tomato;
+}
+
+#cardsbad {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/**Illustratio**/
+
+/**News**/
+
+#h2-news-home {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#container-news-home {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  background-image: url(../images/fond/bgfooterblue.jpg);
+}
+#cards-news-home {
+  margin: 40px 40px;
+height: 420px;
+width: 300px;
+background-size: 100%;
+background-image: url(../images/fond/parchemin.gif);
+}
+
+#news-home {
+  font-family: "MedievalSharp", cursive;
+  color: black;
+  margin-left: 50px;
+  padding-top: 30px;
+  font-weight: 700;
+  font-size: 35px;
+  margin-bottom: -10px;
+}
+
+/**Stats**/
+
+#h2-stats-home {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#container-stats-home {
+  background-image: url(../images/fond/castlebrown.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+
+#cards-stats-home {
+  margin: 40px 40px;
+  height: 420px;
+  width: 300px;
+  background-size: 100%;
+  background-image: url(../images/fond/parchemin.gif);
+}
+
+#img-parchemin-stat {
+  height: 500px;
+  width: 500px;
+  margin: 10 100px;
+}
+
+#stat-home {
+  font-family: "MedievalSharp", cursive;
+  color: black;
+  margin-left: 50px;
+  padding-top: 30px;
+  font-weight: 700;
+  font-size: 35px;
+  margin-bottom: -10px;
+}
+
+#classement-stat-home {
+  color: black;
+  margin-left: 41px;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+#classement-stats-home {
+  color: white;
+}
+
+#nbr-stat-home {
+  color: black;
+  margin-left: 41px;
+  font-weight: 700;
+  font-size: 25px;
 }
 
 /**contact*/
