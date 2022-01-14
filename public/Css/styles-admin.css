@@ -1,0 +1,31 @@
+/***ESPACE ADMIN***/
+body {
+  background-color: #4d2913;
+  width: 100%;
+}
+
+#h1-color {
+  font-family: "MedievalSharp", cursive;
+  color: #d6bf55;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 70px;
+  margin: 20px;
+}
+
+#card-persos {
+  background-color: transparent;
+  padding-bottom: 40px;
+}
+#h-100 {
+  border: 0;
+}
+
+#card-persos :hover {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+#image-banderole {
+  padding-bottom: 40px;
+}

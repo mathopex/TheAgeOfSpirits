@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{parent()}}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block title %}Règle du jeu{% endblock %}
+
+{% block body %}
+<body id="body-regle">
+    <div id="containerBodyRegle">
+        <div id="regle">
+            <h2 id="h2-regle">Règle du jeu</h2>
+        </div>    
+        <div class="card-regle" id="card-regle">
+            <div class="card-body" id="card-bg">
+                <h3 id="h3-regle">Règle 1</h3>
+                <p id="text-regle">Le type de combat se déroule en 5 round</p>
+            </div>
+        </div>
+        <div class="card-body" id="card-bg">
+            <h3 id="h3-regle">Règle 2</h3>
+            <p id="text-regle">Chaque  personnages à 3 actions par round attaque lourde, attaque légère ou défense</p>
+        </div>
+        <div class="card-body" id="card-bg">
+            <h3 id="h3-regle">Règle 3</h3>
+            <p id="text-regle">Chaque mouvement  contribue à des points que l'on perd</p>
+        </div>
+        <div class="card-body" id="card-bg">
+            <h3 id="h3-regle">Règle 4</h3>
+            <p id="text-regle">La stratégie est la meilleur des solutions pour gagner</p>
+        </div>
+        <div class="card-body" id="card-bg">
+            <h3 id="h3-regle">Règle 5</h3>
+            <p id="text-regle">A la fin des 5 rounds, celui qui à le moins de points de vie , perd.</p>
+        </div>
+        <br>
+    </div>
+</body>
+{% endblock %}
