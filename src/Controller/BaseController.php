@@ -18,7 +18,7 @@ class BaseController extends AbstractController
     #[Route('/accueil', name: 'home_page')]
     public function home(PersoRepository $persoRepository): Response
     {
-        $persos = $persoRepository->findBy([], ['nbVictoire' => 'DESC']);
+        $persos = $persoRepository->findBy([], ['id' => 'DESC']);
         return $this->render('base/homePage.html.twig', [
             'persos' => $persos
         ]);
