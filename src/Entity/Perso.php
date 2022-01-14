@@ -19,7 +19,7 @@ class Perso
     #[ORM\Column(type: 'string', length: 255)]
     private $pseudo;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', length: 255,nullable: true)]
     private $niveau;
 
     #[ORM\Column(type: 'string', length: 255)]
@@ -31,26 +31,26 @@ class Perso
     #[ORM\Column(type: 'string', length: 255)]
     private $sex;
 
-    #[ORM\Column(type: 'float')]
-    private $height;
+    // #[ORM\Column(type: 'float')]
+    // private $height;
 
-    #[ORM\Column(type: 'float')]
-    private $weight;
+    // #[ORM\Column(type: 'float')]
+    // private $weight;
 
-    #[ORM\Column(type: 'integer')]
-    private $health;
+    // #[ORM\Column(type: 'integer')]
+    // private $health;
 
-    #[ORM\Column(type: 'integer')]
-    private $attack;
+    // #[ORM\Column(type: 'integer')]
+    // private $attack;
 
-    #[ORM\Column(type: 'integer')]
-    private $defense;
+    // #[ORM\Column(type: 'integer')]
+    // private $defense;
 
-    #[ORM\Column(type: 'string', length: 255)]
-    private $specialitis;
+    // #[ORM\Column(type: 'string', length: 255)]
+    // private $specialitis;
 
-    #[ORM\Column(type: 'integer')]
-    private $specialitis_value;
+    // #[ORM\Column(type: 'integer')]
+    // private $specialitis_value;
 
 
     public function getId(): ?int

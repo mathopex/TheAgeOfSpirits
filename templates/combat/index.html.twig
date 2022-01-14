@@ -6,76 +6,25 @@
 
 {% block body %}
 
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" id ="myModal" data-toggle="modal" data-target="#exampleModal">
-   demande de combat
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="MyInput" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Demande de combat</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">Accepter</button>
-        <button type="button" class="btn btn-danger">Refuser</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script type="text/javascript">
-
-    var myModal = document.getElementById('myModal')
-    var myInput = document.getElementById('myInput')
-
-    myModal.addEventListener('shown.bs.modal', function () { myInput.focus() } )
-</script>
- <style type="text/css">
-        div.button {
-            font-size:18px;
-            display:inline-block;
-            cursor: pointer;
-            border:1px solid #999;
-            border-radius:3px;
-            padding:5px;
-            margin:2px;
-        }    
-    </style>
-
-<h1 id="monH1"></h1>
-    <script type="text/javascript">
-     
-        function popupCentre() {
-            var width=780, height=720;
-            var x=Math.round((screen.width-width)/2);
-            var y=Math.round((screen.height-height)/2);
-            var popup2=window.open("combatUnity", "centre", "width="+width+",height="+height+",left="+x+",top="+y);
-            if (popup2) {
-                console.log("popup2 existe");
-                return popup2;
-            } else {
-                console.log("popup2 n'a pas été affiché");
-            }
-        }
-        /* Récupération d'un message envoyé par un popup */
-        function sendMessage(name) {
-            console.log("Message reçu de "+name);
-        }
-        console.log("Minuterie de 2000 ms");
-        setTimeout("popupAuto()", 2000);
-    </script>
-
-    <div class="button" onclick="var popup2=popupCentre()">Ouvrir l'application Unity</div>
-
+<table >
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>niveau</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        {% for perso in persos %}
+                            <tr>
+                                <td>{{ perso.pseudo }}</td>
+                                <td>{{ perso.niveau}}</td>
+                                <td>
+                                   <a href="{{ path('attente',{id: combat.id}) }}" class="btn btn-sm btn-primary">Demande de Combat</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+            </table>
 {% endblock %}
 
