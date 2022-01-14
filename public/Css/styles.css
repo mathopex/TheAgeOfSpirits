@@ -100,8 +100,8 @@ img {
   padding: 30px;
 }
 
-#btn-header-inscription, #btn-header-connexion {
-  
+#btn-header-inscription,
+#btn-header-connexion {
   background: black;
   color: white;
   padding: 10px 40px;
@@ -116,6 +116,11 @@ img {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 40px;
+}
+
+#subHead a {
+  color: white;
+  text-decoration: none;
 }
 
 /****FOOTER****/
@@ -189,7 +194,8 @@ footer {
   background-color: #4d2913;
 }
 
-#card-img-perso, .card-img-top {
+#card-img-perso,
+.card-img-top {
   background-color: #4d2913;
 }
 
@@ -205,7 +211,7 @@ footer {
 }
 
 #card-body-perso {
-  background-color: #4d2913 ;
+  background-color: #4d2913;
 }
 /**Container Personnages**/
 
@@ -215,7 +221,7 @@ footer {
 }
 /**Detail card humain**/
 #h3-perso-humain {
-  color:#174f68;
+  color: #174f68;
 }
 
 #cardsgood {
@@ -227,7 +233,7 @@ footer {
 
 #h3-perso-esprit {
   padding-bottom: 20px;
-  color:tomato;
+  color: tomato;
 }
 
 #cardsbad {
@@ -254,10 +260,10 @@ footer {
 }
 #cards-news-home {
   margin: 40px 40px;
-height: 420px;
-width: 300px;
-background-size: 100%;
-background-image: url(../images/fond/parchemin.gif);
+  height: 420px;
+  width: 300px;
+  background-size: 100%;
+  background-image: url(../images/fond/parchemin.gif);
 }
 
 #news-home {
@@ -285,7 +291,6 @@ background-image: url(../images/fond/parchemin.gif);
   width: 100%;
   padding: 10px;
 }
-
 
 #cards-stats-home {
   margin: 40px 40px;
@@ -363,6 +368,27 @@ label {
 }
 
 #contact-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+/** page news css**/
+
+#h1-news {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#bg-news {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+#p-contact {
+  color: white;
+  font-size: 20px;
+}
+
+#news-padding {
   padding-bottom: 40px;
   padding-top: 40px;
 }
@@ -523,7 +549,6 @@ label {
   max-height: 70%;
   max-width: 70%;
 }
-
 
 /***page règle du jeu***/
 #body-regle {
