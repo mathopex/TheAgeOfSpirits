@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CombatController extends AbstractController
 {
-    #[Route('/combat/{id}', name: 'combat')]
+    #[Route('/combat', name: 'combat')]
     public function index(PersoRepository $persoRepository, Request $request, CombatRepository $combatRepository,
                             EntityManagerInterface $entityManager): Response
     {
