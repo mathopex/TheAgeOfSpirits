@@ -15,17 +15,17 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CombatController extends AbstractController
 {
-    #[Route('/combat', name: 'combat')]
+    #[Route('/combat/{id}', name: 'combat')]
     public function index(PersoRepository $persoRepository, Request $request, CombatRepository $combatRepository,
                             EntityManagerInterface $entityManager): Response
     {
 
-        $user = new User();
         $persos = $persoRepository->findBy([],['id'=> 'DESC']);
 
         $combat = new Combat();
         $combat -> setCreatedAt(new DateTimeImmutable());
         $combat->setUserDemande($this->getUser());
+        //$combat->setUserReception();
         $entityManager->persist($combat);
         $entityManager->flush();
 
