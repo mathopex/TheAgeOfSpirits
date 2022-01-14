@@ -1,0 +1,11 @@
+perso:
+  clan:
+    human: Humain
+    spirit: Esprit
+  class:
+    barbare: Barbare
+    archer: Archer
+    moine: Moine
+  sex:
+    man: Homme
+    woman: Femme

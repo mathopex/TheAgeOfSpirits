@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Perso;
 use App\Form\PersoFormType;
+use App\Helper\PersoHelper;
 use DateTimeImmutable;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -18,7 +19,7 @@ class PersoController extends AbstractController
     // public function index(): Response
     // {
     //     return $this->render('perso/index.html.twig', [
-            
+
     //     ]);
     // }
         // Création Personnage
@@ -29,22 +30,22 @@ class PersoController extends AbstractController
         $perso = new Perso();
         $form = $this->createForm(PersoFormType::class, $perso);
         $form->handleRequest($request);
- 
+
         if($form->isSubmitted() && $form->isValid())
         {
             $perso->setCreatedAt(new DateTimeImmutable());
              $entityManager->persist($perso);
              $entityManager->flush();
- 
+
              $this->addFlash('success', "Vous avez bien créé votre personnage !");
             return $this->redirectToRoute('perso');
- 
-        }
-         return $this->render('perso/create.html.twig',
-     [
-         'form' => $form->createView(),
-     ]);
 
+        }
+
+         return $this->render('perso/create.html.twig', [
+             'form' => $form->createView(),
+             'persos' => PersoHelper::PERSOS,
+         ]);
     }
 
     // Suppression Personnage

@@ -501,6 +501,12 @@ label {
   padding-top: 40px;
 }
 
+#card-persos-creation {
+  max-height: 70%;
+  max-width: 70%;
+}
+
+
 /***page règle du jeu***/
 #body-regle {
   background-color: #4d2913;
