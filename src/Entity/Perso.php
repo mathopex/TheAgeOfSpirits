@@ -34,7 +34,7 @@ class Perso
     //#[ORM\ManyToOne(targetEntity: Combat::class)]
     //#[ORM\JoinColumn(nullable: true)]
     #[ORM\Column(type: 'integer')]
-    private $nbVictoire;
+    private $nbVictoire = 0;
 
     #[ORM\ManyToOne(targetEntity: Combat::class)]
     #[ORM\JoinColumn(nullable: true)]

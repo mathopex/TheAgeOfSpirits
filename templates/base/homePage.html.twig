@@ -3,6 +3,7 @@
 {% block stylesheets %}
 	{{parent()}}
 	<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
 {% endblock %}
 
 {% block title %}{% endblock %}
@@ -140,9 +141,18 @@
 				</div>
 			</div>
 			<!--Illustration-->
-			<div id="containerIllustration">
-				<img src="{{asset('images/fond/banderole-admin.jpg')}}" alt="illustation site">
-			</div>
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img src="{{asset('images/carousel/banderole-admin1.png')}}" class="d-block w-100" alt="...">
+				  </div>
+				  <div class="carousel-item">
+					<img src="{{asset('images/carousel/banderole-admin2.png')}}" class="d-block w-100" alt="...">
+				  </div>
+				
+				</div>
+			  </div>
+		
 			<!--News-->
 			<h2 id="h2-news-home">News</h2>
 			<div id="container-news-home">
