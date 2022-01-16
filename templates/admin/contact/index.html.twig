@@ -11,14 +11,14 @@
 {% block body %}
 <body id="bg-gestionnaire-conctact">
     <div id="gestionnaire-contact-padding">
-        <h1 id="h1-gestionnaire-contact">BIENVENUE DANS LA GESTION DES CONCTACTS</h1>
+        <h1 id="h1-gestionnaire-contact">BIENVENUE DANS LA GESTION DES CONTACTS</h1>
             <form method="GET">
                     <div>
                         <input type="text" name="q" value="{{ app.request.query.get('q') }}" placeholder="Recherche..." aria-label="Recherche..." aria-describedby="button-addon2">
                         <button type="submit" id="btn-gestionnaire-contact">Rechercher</button>
                     </div>
             </form>
-            <table class="table table-striped" id="table-gestionnaire-contact">
+            <table  id="table-gestionnaire-contact">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -40,8 +40,12 @@
                                 <td>{{ contact.Email }}</td>
                                 <td>
                                     <a href="{{ path('admin_contact_delete', {id: contact.id}) }}" class="btn btn-sm btn-danger me-2">Supprimer</a>
-                                    <a href="{{ path('admin_contact_view', {id: contact.id}) }}" class="btn btn-sm btn-primary">Voir</a>
                                 </td>
+                                <td>
+                                    <a href="{{ path('admin_contact_view', {id: contact.id}) }}" class="btn btn-sm btn-primary">Voir</a> 
+                                </td>
+                                   
+                               
                             </tr>
                         {% endfor %}
                     </tbody>
