@@ -20,7 +20,8 @@ body {
   outline: none;
   cursor: pointer;
   position: relative;
-  top: 600px;
+  top: 500px;
+  width: 8%;
 }
 
 a,
