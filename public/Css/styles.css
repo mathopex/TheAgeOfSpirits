@@ -102,12 +102,7 @@ img {
 
 #btn-header-inscription,
 #btn-header-connexion {
-  background: black;
-  color: white;
-  padding: 10px 40px;
-  border-radius: 20px;
-  font-size: 22px;
-  font-weight: 500;
+  border-radius: 15px;
 }
 
 #speach {
@@ -632,4 +627,78 @@ label {
 #espace-illustration-cards {
   text-align: center;
   margin-bottom: 40px;
+}
+
+/** PageCombat**/
+
+label {
+  color: white;
+}
+.form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: white;
+}
+
+#h1-combat-page {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#bg-combat-page {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+#table-combat-page {
+  color: white;
+  font-size: 20px;
+}
+
+#combat-page-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+/** Page Attente **/
+
+label {
+  color: white;
+}
+.form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: white;
+}
+
+#h1-attente-page {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#bg-attente-page {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+#table-combat-page {
+  color: white;
+  font-size: 20px;
+}
+
+#attente-page-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+#img-attente-page {
+  width: 300px;
+  height: 300px;
+  
+  
+}
+
+#gif-attente-page {
+  display : flex;
+  justify-content: center;
 }

@@ -75,10 +75,10 @@
         {% else %}
 
         <div id="btn-headG">
-                <button id="btn-header-inscription" type="button"><a href="{{ path('registration') }}">Inscription</a></button>
+                <a href="{{ path('registration') }}" class="btn btn-lg btn-dark" id="btn-header-inscription">Inscription</a>
         </div>
         <div id="btn-headD">
-                <button id="btn-header-connexion" type="button"><a href="{{ path('app_login') }}">Connexion</a></button>
+                <a href="{{ path('app_login') }}" class="btn btn-lg btn-dark" id="btn-header-connexion">Connexion</a>
          </div>
         {% endif %}
     </div>
