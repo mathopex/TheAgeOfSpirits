@@ -23,6 +23,11 @@ body {
   top: 500px;
   width: 8%;
 }
+@media (min-width: 760px) {
+  #btn-preHome {
+    top: 580px;
+  }
+}
 
 
 
