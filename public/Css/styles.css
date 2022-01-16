@@ -451,12 +451,15 @@ label {
 #table-gestionnaire-contact {
   color: white;
   font-size: 20px;
+  font-family: "MedievalSharp", cursive;
+  width: 100%;
+  margin-top: 20px;
 }
 
 #btn-gestionnaire-contact {
   background-color: #d6bf55;
   color: white;
-  padding: 8px 20px;
+  padding: 5px 10px;
   border-radius: 10px;
   font-size: 22px;
   font-weight: 500;
@@ -466,7 +469,35 @@ label {
   padding-bottom: 40px;
   padding-top: 40px;
 }
+@media (max-width: 768px) {
+  #table-gestionnaire-contact {
+    font-size: 11px;
+    width: 100%;
+  }
+  #h1-gestionnaire-contact {
+    font-size: 18px;
+  }
+}
+/** PAGE VOIR (view) DE contactGestion*/
 
+#bg-view {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+
+#bg-view a {
+  color: white;
+  font-size: 20px;
+}
+#bg-view h1 {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+#info-demandeView {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
 /**Espace Membre**/
 
 label {
