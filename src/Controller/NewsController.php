@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\News;
 use App\Form\NewsType;
+use App\Repository\NewsRepository;
 use DateTimeImmutable;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -30,8 +31,16 @@ class NewsController extends AbstractController
 
             return $this->redirectToRoute('news');
         }
-        return $this->render('news/index.html.twig', [
+        return $this->render('admin/news/index.html.twig', [
             'form' => $form->createView(),
+        ]);
+    }
+
+    #[Route('/m/newsletter', name: 'newsletter')]
+    public function newsLetter(NewsRepository $newsRepository): Response {
+        $news = $newsRepository->findBy([], ['id' => 'DESC']);
+        return $this->render('newsletter/newsletter.html.twig', [
+            'news' => $news,
         ]);
     }
 }

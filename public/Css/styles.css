@@ -749,3 +749,32 @@ label {
   display: flex;
   justify-content: center;
 }
+
+/** Newsletter **/
+label {
+  color: white;
+}
+.form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: white;
+}
+
+#h1-newsletter-page {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#bg-newsletter-page {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+#p-newsletter-page {
+  color: white;
+  font-size: 20px;
+}
+
+#page-newsletter-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}

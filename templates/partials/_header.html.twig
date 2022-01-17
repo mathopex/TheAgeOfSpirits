@@ -33,14 +33,15 @@
             <div class="navbar-nav" id="menu">
                 <a class="nav-item nav-link active" href="{{ path('home_page') }}">Accueil</a>
                 <a class="nav-item nav-link" href="{{ path('regle') }}">Règles du jeux</a>
-                <a class="nav-item nav-link" href="{{ path('news') }}">News</a>
                 <a class="nav-item nav-link" href="{{ path('contact') }}">Contact</a>
-                <a class="nav-item nav-link" href="#">statistiques du site</a>
+                <a class="nav-item nav-link" href="#">Statistiques du site</a>
                 {% if is_granted('ROLE_ADMIN') %}
-                <a class="nav-item nav-link" href="{{ path('admin_dashboard') }}">Admin</a>
+                    <a class="nav-item nav-link" href="{{ path('admin_dashboard') }}">Admin</a>
+                    <a class="nav-item nav-link" href="{{ path('news') }}">News</a>
                 {% endif %}
                 {% if is_granted('ROLE_USER') %}
                     <a class="nav-item nav-link" href="{{ path('membre') }}">Membre</a>
+                    <a class="nav-item nav-link" href="{{ path('newsletter') }}">Newsletter</a>
 				{% endif %}
                 {% if is_granted('ROLE_USER') %}
                     <a class="nav-item nav-link" href="{{ path('combat') }}">Combat</a>
