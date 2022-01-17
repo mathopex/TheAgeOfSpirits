@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>TheageOfSpirits</title>
-    <!-- <link rel="shortcut icon" href="{{asset('images/TemplateData/favicon.ico')}}"> -->
+    <title>Unity WebGL Player | TheageOfSpirits</title>
+    <link rel="shortcut icon" href="{{asset('images/TemplateData/favicon.ico')}}">
     <link rel="stylesheet" href="{{asset('images/TemplateData/style.css')}}">
     <script src="{{asset('images/TemplateData/UnityProgress.js')}}"></script>
     <script src="{{asset('js/Build/UnityLoader.js')}}"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "{{asset('js/Build/appUnity.json')}}", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "{{asset('Build/public.json')}}", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
     <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div id="unityContainer" style="width: 1280px; height: 720px"></div>
       <div class="footer">
-        <!-- <div class="webgl-logo"></div> -->
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="webgl-logo"></div>
+        <!-- <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div> -->
         <!-- <div class="title">TheageOfSpirits</div> -->
       </div>
     </div>

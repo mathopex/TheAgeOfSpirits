@@ -8,21 +8,22 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: CombatRepository::class)]
 class Combat
 {
+    CONST STATUS_PENDING = "pending";
     CONST STATUS_EN_COUR = "en cour";
     CONST STATUS_ANNULER = "annuler";
-    CONST SATUS_TERMINER = "terminer";
+    CONST STATUS_TERMINER = "terminer";
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
     private $id;
- 
+
 
     #[ORM\ManyToOne(targetEntity: User::class)]
     #[ORM\JoinColumn(nullable: true)]
     private $user_demande;
 
-    #[ORM\ManyToMany(targetEntity: User::class)]
+    #[ORM\ManyToOne(targetEntity: User::class)]
     #[ORM\JoinColumn(nullable: true)]
     private $user_reception;
 
@@ -33,19 +34,25 @@ class Combat
     private $createdAt;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $status = self::STATUS_EN_COUR;
+    private $status = self::STATUS_PENDING;
 
-    #[ORM\Column(type: 'integer', nullable: true)]
-    private $user_reception_id;
 
-  
+    public function toArray(): array
+    {
+        return [
+            'id' => $this->id,
+            'user_demande' => $this->getUserDemande()->getFullname(),
+            'user_reception' => $this->getUserReception()->getFullname(),
+        ];
+    }
+
     public function Annuler(): bool
     {
         return $this->status === self::STATUS_ANNULER;
     }
     public function Terminer(): bool
     {
-        return $this->status === self::SATUS_TERMINER;
+        return $this->status === self::STATUS_TERMINER;
     }
 
     public function getId(): ?int
@@ -109,18 +116,6 @@ class Combat
     public function setStatus(?string $status): self
     {
         $this->status = $status;
-
-        return $this;
-    }
-
-    public function getUserReceptionId(): ?int
-    {
-        return $this->user_reception_id;
-    }
-
-    public function setUserReceptionId(?int $user_reception_id): self
-    {
-        $this->user_reception_id = $user_reception_id;
 
         return $this;
     }

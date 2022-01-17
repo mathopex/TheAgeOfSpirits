@@ -33,12 +33,13 @@
                                 <td>{{ user.firstname}}</td>
                                 <td>{{ user.perso.pseudo}}</td>
                                 <td>
-                                   <a href="{{ path('attente',{id: combat.id}) }}" class="btn btn-sm btn-primary">Demande de Combat</a>
+                                   <a href="{{ path('combat_create',{id: user.id}) }}" class="btn btn-sm btn-primary">Demande de Combat</a>
                                 </td>
                             </tr>
                         {% endfor %}
                     </tbody>
             </table>
+    </div>
 {% endblock %}
 
 
