@@ -33,15 +33,12 @@ class Perso
 
     //#[ORM\ManyToOne(targetEntity: Combat::class)]
     //#[ORM\JoinColumn(nullable: true)]
-    #[ORM\Column(type: 'integer')]
-    private $nbVictoire = 0;
+    #[ORM\Column(type: 'integer' , nullable: true)]
+    private $nbVictoire;
 
-    #[ORM\ManyToOne(targetEntity: Combat::class)]
+    #[ORM\ManyToMany(targetEntity: Combat::class)]
     #[ORM\JoinColumn(nullable: true)]
     private $nbDefaite;
-
-
-
 
     // #[ORM\Column(type: 'integer')]
     // private $health;

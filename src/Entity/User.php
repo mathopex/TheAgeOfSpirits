@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Entity\Traits\CreatedAtTrait;
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -60,12 +61,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string')]
     private $password;
 
-    #[ORM\OneToOne(targetEntity: Perso::class)]
-    #[ORM\JoinColumn(nullable: true)]
-    private ?Perso $Perso = null;
 
     #[ORM\Column(type: 'string', length: 255)]
     private $status = self::STATUS_PENDING_EMAIL_VERIFICATION;
+
+    #[ORM\OneToOne(targetEntity: Perso::class)]
+    #[ORM\JoinColumn(nullable: true)]
+    private $perso;
+
+
 
 
     public function isActive(): bool
@@ -83,7 +87,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return "$this->firstname $this->lastname";
     }
 
-    public function getId(): ?int
+    public function getId()
     {
         return $this->id;
     }
@@ -244,4 +248,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
     }
+
+    public function getPerso(): ?Perso
+    {
+        return $this->perso;
+    }
+
+    public function setPerso(Perso $perso_id): self
+    {
+        $this->perso = $perso_id;
+
+        return $this;
+    }
+
+   
 }

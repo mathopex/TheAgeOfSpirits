@@ -28,19 +28,17 @@
                 </tr>
             </thead>
             <tbody>
-                {% for perso in persos %}
-                    <tr>
-                        <td>{{ perso.pseudo }}</td>
-                        <td>{{ perso.niveau}}</td>
-                        <td>
-                            <a href="{{ path('attente',{id: combat.id}) }}" class="btn btn-sm btn-primary">Demande de Combat</a>
-                        </td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-</body>
+                        {% for user in users %}
+                            <tr>
+                                <td>{{ user.firstname}}</td>
+                                <td>{{ user.perso}}</td>
+                                <td>
+                                   <a href="{{ path('attente',{id: combat.id}) }}" class="btn btn-sm btn-primary">Demande de Combat</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+            </table>
 {% endblock %}
 
 
