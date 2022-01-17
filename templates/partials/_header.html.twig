@@ -43,7 +43,7 @@
                     <a class="nav-item nav-link" href="{{ path('membre') }}">Membre</a>
 				{% endif %}
                 {% if is_granted('ROLE_USER') %}
-                    <a class="nav-item nav-link" href="{{ path('combat') }}">Combat</a>
+                    <a class="nav-item nav-link" href="{{ path('combat_list') }}">Combat</a>
 				{% endif %}
             </div>
         </div>
@@ -71,7 +71,7 @@
     <h1 id="h1" style="font-family: 'MedievalSharp', cursive;">The Age Of Spirits</h1>
     <div id="subHead">
         {% if app.user %}
-        
+
         {% else %}
 
         <div id="btn-headG">

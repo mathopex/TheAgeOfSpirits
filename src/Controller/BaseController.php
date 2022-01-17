@@ -26,11 +26,4 @@ class BaseController extends AbstractController
             'news' => $news,
         ]);
     }
-
-
-    #[Route('/combatUnity', name: 'fight_page')]
-    public function fight(): Response
-    {
-        return $this->render('appUnity/index.html');
-    }
 }
