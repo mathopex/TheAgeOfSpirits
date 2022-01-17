@@ -155,13 +155,28 @@
 		
 			<!--News-->
 			<h2 id="h2-news-home">News</h2>
-			<div id="container-news-home">
+		
+			<div id="container-news-home">	
+				{% for new in news %}
 				<div id="cards-news-home">
 					<div id="title-news-home">
-						<p id="news-home">Quoi de neuf</p>
+						<p id="news-home">{{ new.title}}</p>
 					</div>
+					<div id="message-news-home">
+						<p id="news-home-message">{{new.message }}</p>
+					</div>
+					<div id="date-news-home">
+						{{ new.createdAt|date('d/m/Y')}}
+					</div>
+					<div id="author-news-home">
+						{{ new.author}}
+					</div>
+				
 				</div>
+				{% endfor %}
 			</div>
+
+			
 			<!--Stat-->
 			<h2 id="h2-stats-home">Statistique du site</h2>
 			<div id="container-stats-home">
