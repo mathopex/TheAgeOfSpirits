@@ -22,7 +22,7 @@ class Combat
     #[ORM\JoinColumn(nullable: true)]
     private $user_demande;
 
-    #[ORM\ManyToOne(targetEntity: User::class)]
+    #[ORM\ManyToMany(targetEntity: User::class)]
     #[ORM\JoinColumn(nullable: true)]
     private $user_reception;
 
@@ -34,6 +34,9 @@ class Combat
 
     #[ORM\Column(type: 'string', length: 255)]
     private $status = self::STATUS_EN_COUR;
+
+    #[ORM\Column(type: 'integer', nullable: true)]
+    private $user_reception_id;
 
   
     public function Annuler(): bool
@@ -106,6 +109,18 @@ class Combat
     public function setStatus(?string $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getUserReceptionId(): ?int
+    {
+        return $this->user_reception_id;
+    }
+
+    public function setUserReceptionId(?int $user_reception_id): self
+    {
+        $this->user_reception_id = $user_reception_id;
 
         return $this;
     }
