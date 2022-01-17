@@ -21,7 +21,6 @@ class CombatController extends AbstractController
         EntityManagerInterface $entityManager
     ): Response {
 
-        $user = new User();
         $users = $userRepository->findBy([], ['id' => 'DESC']);
 
         $combat = new Combat();

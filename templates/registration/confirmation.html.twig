@@ -1,13 +1,20 @@
 {% extends "base.html.twig" %}
+{% block stylesheets %}
+	{{parent()}}
+	<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
 
 {% block title "Confirmation" %}
 
 {% block body %}
-	<h1>Merci pour votre inscription !</h1>
+<body id="bg-confirmation">
+	<h1 id="h1-confirmation">Merci pour votre inscription !</h1>
 
-	<p>
+	<p id="p-confirmation">
 		Pensez à vérifier vos mails <br>
 		Veuillez cliquer sur le lien que nous vous avons envoyé
 		par email, afin de confirmer votre adresse.
 	</p>
+</body>
+	
 {% endblock %}

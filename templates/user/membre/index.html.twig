@@ -9,11 +9,29 @@
 
 {% block body %}
 <body id="bg-espace-membre">
-    <div id="espace-membre-padding">
-            <h1 id="h1-espace-membre">Hello Bienvenue dans votre compte! ✅</h1> 
+    <!--Illustration-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{asset('images/carousel/banderole-admin1.png')}}" class="d-block w-100" alt="carousel illustration personnage">
+          </div>
+          <div class="carousel-item">
+            <img src="{{asset('images/carousel/banderole-admin2.png')}}" class="d-block w-100" alt="carousel illustration personnage">
+          </div>
         
-         <p id="p-espace-membre">Informations personnages</p>
+        </div>
+      </div>
+    <div id="espace-membre-padding">
+            <h1 id="h1-espace-membre">Hello, Bienvenue dans votre compte! </h1> 
+        
+         <p id="p-espace-membre">Cher(e) joueurs(se) ton compte est maintenant créer , il te suffit maintenant de créer ton personnage pour accéder au jeux et jouer. C'est parti !</p>
     </div>
+
+     <!--Illustration cards personnages-->
+			<div id="espace-illustration-cards">
+                <a href="{{path('perso')}}"><img src="{{asset('images/cards/cards_membre/cards_creationPerso.png')}}" alt="cards lien création personnage"></a>
+            </code>
+			</div>
 </body>
 
 {% endblock %}
