@@ -8,6 +8,7 @@ use App\Form\PersoFormType;
 use App\Helper\PersoHelper;
 use App\Repository\UserRepository;
 use DateTimeImmutable;
+use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -30,7 +31,15 @@ class PersoController extends AbstractController
     {
 
         $userRepository = $entityManager->getRepository(User::class);
-        $perso = new Perso();
+        /** @var User $user */
+        $user = $this->getUser();
+        $perso = $user->getPerso();
+        
+
+        if($perso->isValid() ) {
+            return $this->redirectToRoute('membre');
+        }
+
         $form = $this->createForm(PersoFormType::class, $perso);
         $form->handleRequest($request);
 
@@ -54,9 +63,23 @@ class PersoController extends AbstractController
     }
 
     // Suppression Personnage
-    #[Route('/{slug}/delete', name: 'delete')]
-    public function delete(): Response
-    {
+    #[Route('/delete', name: 'delete')]
+    public function delete(EntityManagerInterface $entityManager): Response
+   
+    {   
+        /** @var User $user */
+        $user = $this->getUser();
+        $perso = $user->getPerso();
+
+        $perso 
+        ->setpseudo('')
+        ->setclan('')
+        ->setclass('')
+        ->setsex('')
+        ;
+
+        $entityManager->flush();
+
         return $this->redirectToRoute('perso');
     }
 

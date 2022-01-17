@@ -65,12 +65,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string', length: 255)]
     private $status = self::STATUS_PENDING_EMAIL_VERIFICATION;
 
-    #[ORM\OneToOne(targetEntity: Perso::class)]
+    #[ORM\OneToOne(targetEntity: Perso::class, fetch:"EAGER" , cascade:["persist"])]
     #[ORM\JoinColumn(nullable: true)]
     private $perso;
 
-
-
+    public function __construct()
+    {
+        $this->perso = new Perso();
+    }
 
     public function isActive(): bool
     {
@@ -249,7 +251,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    public function getPerso(): ?Perso
+    public function getPerso(): Perso
     {
         return $this->perso;
     }

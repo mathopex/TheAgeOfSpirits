@@ -16,20 +16,21 @@ class Perso
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $pseudo;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $niveau;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $class;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $clan;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $sex;
+
 
     //#[ORM\ManyToOne(targetEntity: Combat::class)]
     //#[ORM\JoinColumn(nullable: true)]
@@ -54,6 +55,15 @@ class Perso
 
     // #[ORM\Column(type: 'integer')]
     // private $specialitis_value;
+
+
+    public function isValid(): bool
+    { 
+        return $this->pseudo
+        && $this->clan 
+        && $this->class
+        && $this->sex;
+    }
 
 
     public function getId(): ?int

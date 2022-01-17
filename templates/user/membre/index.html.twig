@@ -26,10 +26,16 @@
         
          <p id="p-espace-membre">Cher(e) joueurs(se) ton compte est maintenant créer , il te suffit maintenant de créer ton personnage pour accéder au jeux et jouer. C'est parti !</p>
     </div>
-
+    <tr>
+      <td>
+        <a href="{{ path('delete') }}" class="btn btn-sm btn-danger me-2">Supprimer son personnage</a>
+      </td>
+    </tr>
      <!--Illustration cards personnages-->
 			<div id="espace-illustration-cards">
+                {% if not app.user.perso.isValid %}
                 <a href="{{path('perso')}}"><img src="{{asset('images/cards/cards_membre/cards_creationPerso.png')}}" alt="cards lien création personnage"></a>
+                {% endif %}
             </code>
 			</div>
 </body>
