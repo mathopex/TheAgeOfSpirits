@@ -20,7 +20,9 @@ class BaseController extends AbstractController
     public function home(PersoRepository $persoRepository, NewsRepository $newsRepository): Response
     {
         $persos = $persoRepository->findBy([], ['id' => 'DESC']);
-        $news = $newsRepository->findBy([], ['id' => 'DESC']);
+        $news = $newsRepository->findBy([], ['id' => 'DESC'], 2);
+
+
         return $this->render('base/homePage.html.twig', [
             'persos' => $persos,
             'news' => $news,
