@@ -24,9 +24,9 @@ class PersoController extends AbstractController
 
     //     ]);
     // }
-        // Création Personnage
+    // Création Personnage
     #[Route('', name: 'perso')]
-    public function create(Request $request,EntityManagerInterface $entityManager, UserRepository $userRepository): Response
+    public function create(Request $request, EntityManagerInterface $entityManager, UserRepository $userRepository): Response
     {
 
         $userRepository = $entityManager->getRepository(User::class);
@@ -34,23 +34,22 @@ class PersoController extends AbstractController
         $form = $this->createForm(PersoFormType::class, $perso);
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid())
-        {
+        if ($form->isSubmitted() && $form->isValid()) {
             $user = $userRepository->find($this->getUser());
             $perso->setCreatedAt(new DateTimeImmutable());
             $user->setPerso($perso);
+
             $entityManager->persist($perso);
             $entityManager->flush();
 
-             $this->addFlash('success', "Vous avez bien créé votre personnage !");
+            $this->addFlash('success', "Vous avez bien créé votre personnage !");
             return $this->redirectToRoute('perso');
-
         }
 
-         return $this->render('perso/create.html.twig', [
-             'form' => $form->createView(),
-             'persos' => PersoHelper::PERSOS,
-         ]);
+        return $this->render('perso/create.html.twig', [
+            'form' => $form->createView(),
+            'persos' => PersoHelper::PERSOS,
+        ]);
     }
 
     // Suppression Personnage
@@ -59,7 +58,4 @@ class PersoController extends AbstractController
     {
         return $this->redirectToRoute('perso');
     }
-
 }
-
-

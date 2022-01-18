@@ -30,8 +30,10 @@
             <tbody>
                         {% for user in users %}
                             <tr>
-                                <td>{{ user.firstname}}</td>
-                                <td>{{ user.perso.pseudo}}</td>
+                                <td>{{ user.firstname}}</td>  
+                                
+                                <td>{{ user.name}}</td>
+                              
                                 <td>
                                    <a href="{{ path('combat_create',{id: user.id}) }}" class="btn btn-sm btn-primary">Demande de Combat</a>
                                 </td>
