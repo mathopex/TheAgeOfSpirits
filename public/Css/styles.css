@@ -66,6 +66,22 @@ img {
   max-width: 100%;
 }
 
+#btn-deconnexion {
+  list-style-type: none;
+}
+
+#btn-nav-deconnexion {
+  color: white;
+}
+
+#btn-nav-connexion {
+  color: white;
+}
+
+#btn-nav-inscription {
+  color: white;
+}
+
 /*****SUBHEAD***/
 
 #subHead {
@@ -84,14 +100,9 @@ img {
   padding: 30px;
 }
 
-#btn-header-inscription, #btn-header-connexion {
-  
-  background: black;
-  color: white;
-  padding: 10px 40px;
-  border-radius: 20px;
-  font-size: 22px;
-  font-weight: 500;
+#btn-header-inscription,
+#btn-header-connexion {
+  border-radius: 15px;
 }
 
 #speach {
@@ -100,6 +111,11 @@ img {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 40px;
+}
+
+#subHead a {
+  color: white;
+  text-decoration: none;
 }
 
 /****FOOTER****/
@@ -173,12 +189,15 @@ footer {
   background-color: #4d2913;
 }
 
-#card-img-perso, .card-img-top {
+#card-img-perso,
+.card-img-top {
   background-color: #4d2913;
 }
 
 #h-100 {
   border: 0;
+  background-color: transparent;
+  padding-bottom: 20px;
 }
 
 #card-title-perso {
@@ -187,7 +206,7 @@ footer {
 }
 
 #card-body-perso {
-  background-color: #4d2913 ;
+  background-color: #4d2913;
 }
 /**Container Personnages**/
 
@@ -197,7 +216,7 @@ footer {
 }
 /**Detail card humain**/
 #h3-perso-humain {
-  color:#174f68;
+  color: #174f68;
 }
 
 #cardsgood {
@@ -209,7 +228,7 @@ footer {
 
 #h3-perso-esprit {
   padding-bottom: 20px;
-  color:tomato;
+  color: tomato;
 }
 
 #cardsbad {
@@ -217,7 +236,6 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
 }
-/**Illustratio**/
 
 /**News**/
 
@@ -230,26 +248,40 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  width: 100%;
+  max-width: 100%;
   padding: 10px;
-  background-image: url(../images/fond/bgfooterblue.jpg);
+  margin-bottom: 20px;
+  background-image: url(../images/fond/maps.jpg);
 }
 #cards-news-home {
   margin: 40px 40px;
-height: 420px;
-width: 300px;
-background-size: 100%;
-background-image: url(../images/fond/parchemin.gif);
+  height: 420px;
+  width: 300px;
+  background-size: 100%;
+  background-image: url(../images/fond/parchemin.gif);
+  background-repeat: no-repeat;
 }
 
-#news-home {
+#title-news-home {
   font-family: "MedievalSharp", cursive;
   color: black;
-  margin-left: 50px;
   padding-top: 30px;
-  font-weight: 700;
-  font-size: 35px;
-  margin-bottom: -10px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+#news-home-message,
+#date-news-home {
+  font-size: 16px;
+  text-align: center;
+  font-family: "MedievalSharp", cursive;
+}
+
+#author-news-home {
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
 }
 
 /**Stats**/
@@ -264,10 +296,10 @@ background-image: url(../images/fond/parchemin.gif);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  width: 100%;
+  max-width: 100%;
   padding: 10px;
+  margin-bottom: 20px;
 }
-
 
 #cards-stats-home {
   margin: 40px 40px;
@@ -349,6 +381,27 @@ label {
   padding-top: 40px;
 }
 
+/** page news css**/
+
+#h1-news {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#bg-news {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+#p-contact {
+  color: white;
+  font-size: 20px;
+}
+
+#news-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
 /**Gestionnaire des utilisateurs**/
 
 label {
@@ -411,12 +464,15 @@ label {
 #table-gestionnaire-contact {
   color: white;
   font-size: 20px;
+  font-family: "MedievalSharp", cursive;
+  width: 100%;
+  margin-top: 20px;
 }
 
 #btn-gestionnaire-contact {
   background-color: #d6bf55;
   color: white;
-  padding: 8px 20px;
+  padding: 5px 10px;
   border-radius: 10px;
   font-size: 22px;
   font-weight: 500;
@@ -426,7 +482,35 @@ label {
   padding-bottom: 40px;
   padding-top: 40px;
 }
+@media (max-width: 768px) {
+  #table-gestionnaire-contact {
+    font-size: 11px;
+    width: 100%;
+  }
+  #h1-gestionnaire-contact {
+    font-size: 18px;
+  }
+}
+/** PAGE VOIR (view) DE contactGestion*/
 
+#bg-view {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+
+#bg-view a {
+  color: white;
+  font-size: 20px;
+}
+#bg-view h1 {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+#info-demandeView {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
 /**Espace Membre**/
 
 label {
@@ -501,6 +585,11 @@ label {
   padding-top: 40px;
 }
 
+#card-persos-creation {
+  max-height: 70%;
+  max-width: 70%;
+}
+
 /***page règle du jeu***/
 #body-regle {
   background-color: #4d2913;
@@ -513,44 +602,150 @@ label {
 }
 
 #card-bg {
-  background-image: url(../images/fond/bg_rule.png);
+  background-image: url(../images/fond/fond-rules.png);
   background-repeat: no-repeat;
   background-size: contain;
   max-width: 100%;
   height: 100%;
-
-  padding-bottom: 20px;
-  padding-left: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 70px;
+  padding-left: 35px;
 }
 
 #h3-regle {
   color: black;
-  font-size: 18px;
+  font-size: 20px;
   padding-top: 5px;
 }
 
 #text-regle {
   font-family: "MedievalSharp", cursive;
   padding-left: 5px;
-  font-size: 10px;
+  font-size: 16px;
 }
 #containerBodyRegle {
   justify-content: center;
+  width: 100%;
 }
 @media (min-width: 768px) {
+  #h2-regle {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   #h3-regle {
     font-size: 22px;
-    padding-top: 20px;
+    font-weight: 700;
+    padding-top: 25px;
     padding-left: 5px;
   }
 
   #text-regle {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 10px;
   }
 
   #containerBodyRegle {
     max-width: 100%;
     height: auto;
   }
+}
+
+/** page confirmation css**/
+
+#h1-confirmation {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#bg-confirmation {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+#p-confirmation {
+  color: white;
+  font-size: 20px;
+}
+
+#confiramtion-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+/*** partie espace membre***/
+
+#espace-illustration-cards {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/** PageCombat**/
+
+label {
+  color: white;
+}
+.form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: white;
+}
+
+#h1-combat-page {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+}
+
+#bg-combat-page {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+#table-combat-page {
+  color: white;
+  font-size: 20px;
+}
+
+#combat-page-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+/** Page Attente **/
+
+label {
+  color: white;
+}
+.form-control,
+.form-control:focus {
+  background-color: transparent;
+  color: white;
+}
+
+#h1-attente-page {
+  color: #d6bf55;
+  font-family: "MedievalSharp", cursive;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#bg-attente-page {
+  background-color: #4d2913;
+  font-size: 18px;
+}
+#table-combat-page {
+  color: white;
+  font-size: 20px;
+}
+
+#attente-page-padding {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+#img-attente-page {
+  width: 300px;
+  height: 300px;
+}
+
+#gif-attente-page {
+  display: flex;
+  justify-content: center;
 }

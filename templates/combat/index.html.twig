@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{parent()}}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block title %}Combat{% endblock %}
+
+
+
+{% block body %}
+<body id="bg-combat-page">
+    <div id="combat-page-padding">
+        <h1 id="h1-combat-page">BIENVENUE DANS L'ESPACE COMBAT</h1>
+        <form method="GET">
+            <div>
+                <input type="text" name="q" value="{{ app.request.query.get('q') }}" placeholder="Recherche..." aria-label="Recherche..." aria-describedby="button-addon2">
+                <button type="submit" id="btn-gestionnaire-contact">Rechercher</button>
+            </div>
+        </form>
+        <table class="table tbla-striped" id="table-combat-page">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>niveau</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                        {% for user in users %}
+                            <tr>
+                                <td>{{ user.firstname}}</td>
+                                <td>{{ user.perso.pseudo}}</td>
+                                <td>
+                                   <a href="{{ path('combat_create',{id: user.id}) }}" class="btn btn-sm btn-primary">Demande de Combat</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+            </table>
+    </div>
+{% endblock %}
+
+
+
+

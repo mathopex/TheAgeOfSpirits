@@ -12,9 +12,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/admin')]
+#[Route('/m/admin')]
 class DashboardController extends AbstractController
 {
+
     #[Route('', name: 'admin_dashboard')]
     public function index(): Response
     {
@@ -22,20 +23,17 @@ class DashboardController extends AbstractController
     }
 
     #[Route('/userGestion', name: 'user_gestion')]
-    public function UserGestion(UserRepository $userRepository,Request $request): Response
+    public function UserGestion(UserRepository $userRepository, Request $request): Response
     {
-        if($q = $request->query->get('q'))
-        {
+        if ($q = $request->query->get('q')) {
             $users = $userRepository->search($q);
-        }
-        else
-        {
-            $users = $userRepository->findBy([],['id'=> 'DESC']);
+        } else {
+            $users = $userRepository->findBy([], ['id' => 'DESC']);
         }
 
-        
-        return $this->render('admin/user/index.html.twig',[
-            'users'=>$users,
+
+        return $this->render('admin/user/index.html.twig', [
+            'users' => $users,
         ]);
     }
 
@@ -43,18 +41,15 @@ class DashboardController extends AbstractController
     public function ContactGestiton(ContactRepository $contactRepository, Request $request): Response
     {
 
-        if($q = $request->query->get('q'))
-        {
+        if ($q = $request->query->get('q')) {
             $contacts = $contactRepository->search($q);
-        }
-        else
-        {
-            $contacts = $contactRepository->findBy([],['id'=> 'DESC']);
+        } else {
+            $contacts = $contactRepository->findBy([], ['id' => 'DESC']);
         }
 
-        
-        return $this->render('admin/contact/index.html.twig',[
-            'contacts'=>$contacts,
+
+        return $this->render('admin/contact/index.html.twig', [
+            'contacts' => $contacts,
         ]);
     }
 
@@ -74,5 +69,4 @@ class DashboardController extends AbstractController
         $this->addFlash('success', "Demande supprimée.");
         return $this->redirectToRoute('contact_gestion');
     }
-
 }

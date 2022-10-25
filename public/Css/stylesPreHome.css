@@ -9,21 +9,24 @@ body {
   font-family: Arial, Helvetica, Arial, Helvetica, sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 100%;
 }
 
-.btn-preHome {
+#btn-preHome {
   display: block;
   margin: 270px auto 0;
   font-size: 20px;
-  font-weight: lighter;
-  background: black;
-  color: white;
-  padding: 15px 60px;
   border-radius: 20px;
   outline: none;
   cursor: pointer;
   position: relative;
-  top: 600px;
+  top: 500px;
+  width: 8%;
+}
+@media (min-width: 760px) {
+  #btn-preHome {
+    top: 580px;
+  }
 }
 
 a,

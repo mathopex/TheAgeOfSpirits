@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{parent()}}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    {{parent()}}
+    <script src="{{ asset('Js/combat-attente.js') }}"></script>
+{% endblock %}
+
+{% block title %}Salon d'attente{% endblock %}
+
+{% block body %}
+
+<body id="bg-attente-page">
+    <div id="attente-page-padding">
+        <h1 id="h1-attente-page">Merci de patienter en attendant que le combat commence</h1>
+        <div id="gif-attente-page">
+            <img src="{{asset('images/fond/giphy.gif')}}" class="card-img-top" alt="gif café" id="img-attente-page">
+        </div>
+    </div>
+
+    <div id="attente-data" data-ajax-url="{{ path('combat_attente_data', {id: combat.id}) }}"></div>
+
+</body>
+
+{% endblock %}

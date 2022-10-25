@@ -60,8 +60,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string')]
     private $password;
 
+
     #[ORM\Column(type: 'string', length: 255)]
     private $status = self::STATUS_PENDING_EMAIL_VERIFICATION;
+
+    #[ORM\OneToOne(targetEntity: Perso::class)]
+    #[ORM\JoinColumn(nullable: true)]
+    private $perso;
+
+
 
 
     public function isActive(): bool
@@ -76,10 +83,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function getFullname(): string
     {
-        return "$this->firstname $this->lastname";
+        return "$this->firstname $this->name";
     }
 
-    public function getId(): ?int
+    public function getId()
     {
         return $this->id;
     }
@@ -240,4 +247,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
     }
+
+    public function getPerso(): ?Perso
+    {
+        return $this->perso;
+    }
+
+    public function setPerso(Perso $perso_id): self
+    {
+        $this->perso = $perso_id;
+
+        return $this;
+    }
+
+
 }

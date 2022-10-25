@@ -31,24 +31,56 @@
         </button>
         <div class="collapse navbar-collapse" id="navbar">
             <div class="navbar-nav" id="menu">
-                <a class="nav-item nav-link active" href="#">Accueil</a>
-                <a class="nav-item nav-link" href="#">Règles du jeux</a>
-                <a class="nav-item nav-link" href="#">News</a>
-                <a class="nav-item nav-link" href="#">Contact</a>
+                <a class="nav-item nav-link active" href="{{ path('home_page') }}">Accueil</a>
+                <a class="nav-item nav-link" href="{{ path('regle') }}">Règles du jeux</a>
+                <a class="nav-item nav-link" href="{{ path('news') }}">News</a>
+                <a class="nav-item nav-link" href="{{ path('contact') }}">Contact</a>
                 <a class="nav-item nav-link" href="#">statistiques du site</a>
-                <a class="nav-item nav-link" href="#">Admin</a>
+                {% if is_granted('ROLE_ADMIN') %}
+                <a class="nav-item nav-link" href="{{ path('admin_dashboard') }}">Admin</a>
+                {% endif %}
+                {% if is_granted('ROLE_USER') %}
+                    <a class="nav-item nav-link" href="{{ path('membre') }}">Membre</a>
+				{% endif %}
+                {% if is_granted('ROLE_USER') %}
+                    <a class="nav-item nav-link" href="{{ path('combat_list') }}">Combat</a>
+				{% endif %}
             </div>
         </div>
+        {% if app.user %}
+			<li class="nav-item dropdown" id="btn-deconnexion">
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{{ path('user_gestion') }}">Gestion des utilisateurs</a></li>
+                        <li><a class="dropdown-item" href="#">Gestion du chat</a></li>
+						<li><a class="dropdown-item" href="{{ path('contact_gestion') }}">Gestion des contacts</a></li>
+					{# liens pour les pages ROLE_USER #}
+					<li><hr class="dropdown-divider"></li>
+				</ul>
+			</li>
+		{% endif %}
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                {% if app.user %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_logout') }}" id="btn-nav-deconnexion">Deconnexion</a>
+                    </li>
+                    {% else %}
+                {% endif %}
+            </ul>
     </nav>
 
     <h1 id="h1" style="font-family: 'MedievalSharp', cursive;">The Age Of Spirits</h1>
     <div id="subHead">
+        {% if app.user %}
+
+        {% else %}
+
         <div id="btn-headG">
-                <button id="btn-header-inscription" type="button">Inscription</button>
+                <a href="{{ path('registration') }}" class="btn btn-lg btn-dark" id="btn-header-inscription">Inscription</a>
         </div>
         <div id="btn-headD">
-                <button id="btn-header-connexion" type="button">Connexion</button>
+                <a href="{{ path('app_login') }}" class="btn btn-lg btn-dark" id="btn-header-connexion">Connexion</a>
          </div>
+        {% endif %}
     </div>
     <p id="speach">The Age of Spirits est un jeu navigateur qui permet de créer son personnage dans le royaume de Bolateria et de choisir son camp pour combattre les humains ou les esprits</p>
 </header>

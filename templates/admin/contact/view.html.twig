@@ -1,13 +1,33 @@
 {% extends "base.html.twig" %}
 
+{% block stylesheets %}
+    {{parent()}}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
 {% block title "Demande de contact" %}
 
 {% block body %}
+<body id="bg-view">
 	<a href="{{ path('contact_gestion') }}"><-- Retour</a>
+
+			<!--Illustration-->
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img src="{{asset('images/carousel/banderole-admin1.png')}}" class="d-block w-100" alt="...">
+				  </div>
+				  <div class="carousel-item">
+					<img src="{{asset('images/carousel/banderole-admin2.png')}}" class="d-block w-100" alt="...">
+				  </div>
+				
+				</div>
+			  </div>
+		
 
 	<h1>Demande de contact # {{ contact.id }}</h1>
 
-	<div class="mt-5">
+	<div class="mt-5" id="info-demandeView">
 		<div>ID : <b>{{ contact.id }}</b></div>
 		<div>Date : <b>{{ contact.createdAt|date('d/m/Y \\à H\\hi') }}</b></div>
 		<div>Email : <b>{{ contact.email }}</b></div>
@@ -16,4 +36,6 @@
 			{{ contact.message|nl2br }}
 		</div>
 	</div>
+</body>
+	
 {% endblock %}
