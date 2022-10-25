@@ -2,19 +2,18 @@
 
 namespace Symfony\Config\Framework\Mailer;
 
-
 use Symfony\Component\Config\Loader\ParamConfigurator;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 
-
 /**
- * This class is automatically generated to help creating config.
+ * This class is automatically generated to help in creating a config.
  */
 class EnvelopeConfig 
 {
     private $sender;
     private $recipients;
-    
+    private $_usedProperties = [];
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -22,51 +21,54 @@ class EnvelopeConfig
      */
     public function sender($value): static
     {
+        $this->_usedProperties['sender'] = true;
         $this->sender = $value;
-    
+
         return $this;
     }
-    
+
     /**
-     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
+     * @param mixed $value
      *
      * @return $this
      */
-    public function recipients(ParamConfigurator|array $value): static
+    public function recipients(mixed $value): static
     {
+        $this->_usedProperties['recipients'] = true;
         $this->recipients = $value;
-    
+
         return $this;
     }
-    
+
     public function __construct(array $value = [])
     {
-    
-        if (isset($value['sender'])) {
+        if (array_key_exists('sender', $value)) {
+            $this->_usedProperties['sender'] = true;
             $this->sender = $value['sender'];
             unset($value['sender']);
         }
-    
-        if (isset($value['recipients'])) {
+
+        if (array_key_exists('recipients', $value)) {
+            $this->_usedProperties['recipients'] = true;
             $this->recipients = $value['recipients'];
             unset($value['recipients']);
         }
-    
+
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-    
+
     public function toArray(): array
     {
         $output = [];
-        if (null !== $this->sender) {
+        if (isset($this->_usedProperties['sender'])) {
             $output['sender'] = $this->sender;
         }
-        if (null !== $this->recipients) {
+        if (isset($this->_usedProperties['recipients'])) {
             $output['recipients'] = $this->recipients;
         }
-    
+
         return $output;
     }
 

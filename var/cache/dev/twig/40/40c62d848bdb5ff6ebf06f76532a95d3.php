@@ -116,7 +116,7 @@ class __TwigTemplate_065840000ff8b1291fc672f270ea65b2 extends Template
         echo "<body id=\"body-regle\">
     <div id=\"containerBodyRegle\">
         <div id=\"regle\">
-            <h2 id=\"h2-regle\">Règle du jeu</h2>
+            <h2 id=\"h2-regle\"> Les Règles du jeu</h2>
         </div>    
         <div class=\"card-regle\" id=\"card-regle\">
             <div class=\"card-body\" id=\"card-bg\">
@@ -181,7 +181,7 @@ class __TwigTemplate_065840000ff8b1291fc672f270ea65b2 extends Template
 <body id=\"body-regle\">
     <div id=\"containerBodyRegle\">
         <div id=\"regle\">
-            <h2 id=\"h2-regle\">Règle du jeu</h2>
+            <h2 id=\"h2-regle\"> Les Règles du jeu</h2>
         </div>    
         <div class=\"card-regle\" id=\"card-regle\">
             <div class=\"card-body\" id=\"card-bg\">

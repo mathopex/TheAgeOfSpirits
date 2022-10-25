@@ -8,9 +8,8 @@ require_once __DIR__.\DIRECTORY_SEPARATOR.'FilterSetConfig'.\DIRECTORY_SEPARATOR
 use Symfony\Component\Config\Loader\ParamConfigurator;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 
-
 /**
- * This class is automatically generated to help creating config.
+ * This class is automatically generated to help in creating a config.
  */
 class FilterSetConfig 
 {
@@ -25,7 +24,8 @@ class FilterSetConfig
     private $defaultImage;
     private $filters;
     private $postProcessors;
-    
+    private $_usedProperties = [];
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -33,11 +33,12 @@ class FilterSetConfig
      */
     public function quality($value): static
     {
+        $this->_usedProperties['quality'] = true;
         $this->quality = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -45,11 +46,12 @@ class FilterSetConfig
      */
     public function jpegQuality($value): static
     {
+        $this->_usedProperties['jpegQuality'] = true;
         $this->jpegQuality = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -57,11 +59,12 @@ class FilterSetConfig
      */
     public function pngCompressionLevel($value): static
     {
+        $this->_usedProperties['pngCompressionLevel'] = true;
         $this->pngCompressionLevel = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -69,11 +72,12 @@ class FilterSetConfig
      */
     public function pngCompressionFilter($value): static
     {
+        $this->_usedProperties['pngCompressionFilter'] = true;
         $this->pngCompressionFilter = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -81,11 +85,12 @@ class FilterSetConfig
      */
     public function format($value): static
     {
+        $this->_usedProperties['format'] = true;
         $this->format = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|bool $value
@@ -93,11 +98,12 @@ class FilterSetConfig
      */
     public function animated($value): static
     {
+        $this->_usedProperties['animated'] = true;
         $this->animated = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -105,11 +111,12 @@ class FilterSetConfig
      */
     public function cache($value): static
     {
+        $this->_usedProperties['cache'] = true;
         $this->cache = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -117,11 +124,12 @@ class FilterSetConfig
      */
     public function dataLoader($value): static
     {
+        $this->_usedProperties['dataLoader'] = true;
         $this->dataLoader = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -129,135 +137,146 @@ class FilterSetConfig
      */
     public function defaultImage($value): static
     {
+        $this->_usedProperties['defaultImage'] = true;
         $this->defaultImage = $value;
-    
+
         return $this;
     }
-    
+
     public function filter(string $name, array $value = []): \Symfony\Config\LiipImagine\FilterSetConfig\FilterConfig
     {
         if (!isset($this->filters[$name])) {
-            return $this->filters[$name] = new \Symfony\Config\LiipImagine\FilterSetConfig\FilterConfig($value);
+            $this->_usedProperties['filters'] = true;
+            $this->filters[$name] = new \Symfony\Config\LiipImagine\FilterSetConfig\FilterConfig($value);
+        } elseif (1 < \func_num_args()) {
+            throw new InvalidConfigurationException('The node created by "filter()" has already been initialized. You cannot pass values the second time you call filter().');
         }
-        if ([] === $value) {
-            return $this->filters[$name];
-        }
-    
-        throw new InvalidConfigurationException('The node created by "filter()" has already been initialized. You cannot pass values the second time you call filter().');
+
+        return $this->filters[$name];
     }
-    
+
     public function postProcessors(string $name, array $value = []): \Symfony\Config\LiipImagine\FilterSetConfig\PostProcessorsConfig
     {
         if (!isset($this->postProcessors[$name])) {
-            return $this->postProcessors[$name] = new \Symfony\Config\LiipImagine\FilterSetConfig\PostProcessorsConfig($value);
+            $this->_usedProperties['postProcessors'] = true;
+            $this->postProcessors[$name] = new \Symfony\Config\LiipImagine\FilterSetConfig\PostProcessorsConfig($value);
+        } elseif (1 < \func_num_args()) {
+            throw new InvalidConfigurationException('The node created by "postProcessors()" has already been initialized. You cannot pass values the second time you call postProcessors().');
         }
-        if ([] === $value) {
-            return $this->postProcessors[$name];
-        }
-    
-        throw new InvalidConfigurationException('The node created by "postProcessors()" has already been initialized. You cannot pass values the second time you call postProcessors().');
+
+        return $this->postProcessors[$name];
     }
-    
+
     public function __construct(array $value = [])
     {
-    
-        if (isset($value['quality'])) {
+        if (array_key_exists('quality', $value)) {
+            $this->_usedProperties['quality'] = true;
             $this->quality = $value['quality'];
             unset($value['quality']);
         }
-    
-        if (isset($value['jpeg_quality'])) {
+
+        if (array_key_exists('jpeg_quality', $value)) {
+            $this->_usedProperties['jpegQuality'] = true;
             $this->jpegQuality = $value['jpeg_quality'];
             unset($value['jpeg_quality']);
         }
-    
-        if (isset($value['png_compression_level'])) {
+
+        if (array_key_exists('png_compression_level', $value)) {
+            $this->_usedProperties['pngCompressionLevel'] = true;
             $this->pngCompressionLevel = $value['png_compression_level'];
             unset($value['png_compression_level']);
         }
-    
-        if (isset($value['png_compression_filter'])) {
+
+        if (array_key_exists('png_compression_filter', $value)) {
+            $this->_usedProperties['pngCompressionFilter'] = true;
             $this->pngCompressionFilter = $value['png_compression_filter'];
             unset($value['png_compression_filter']);
         }
-    
-        if (isset($value['format'])) {
+
+        if (array_key_exists('format', $value)) {
+            $this->_usedProperties['format'] = true;
             $this->format = $value['format'];
             unset($value['format']);
         }
-    
-        if (isset($value['animated'])) {
+
+        if (array_key_exists('animated', $value)) {
+            $this->_usedProperties['animated'] = true;
             $this->animated = $value['animated'];
             unset($value['animated']);
         }
-    
-        if (isset($value['cache'])) {
+
+        if (array_key_exists('cache', $value)) {
+            $this->_usedProperties['cache'] = true;
             $this->cache = $value['cache'];
             unset($value['cache']);
         }
-    
-        if (isset($value['data_loader'])) {
+
+        if (array_key_exists('data_loader', $value)) {
+            $this->_usedProperties['dataLoader'] = true;
             $this->dataLoader = $value['data_loader'];
             unset($value['data_loader']);
         }
-    
-        if (isset($value['default_image'])) {
+
+        if (array_key_exists('default_image', $value)) {
+            $this->_usedProperties['defaultImage'] = true;
             $this->defaultImage = $value['default_image'];
             unset($value['default_image']);
         }
-    
-        if (isset($value['filters'])) {
+
+        if (array_key_exists('filters', $value)) {
+            $this->_usedProperties['filters'] = true;
             $this->filters = array_map(function ($v) { return new \Symfony\Config\LiipImagine\FilterSetConfig\FilterConfig($v); }, $value['filters']);
             unset($value['filters']);
         }
-    
-        if (isset($value['post_processors'])) {
+
+        if (array_key_exists('post_processors', $value)) {
+            $this->_usedProperties['postProcessors'] = true;
             $this->postProcessors = array_map(function ($v) { return new \Symfony\Config\LiipImagine\FilterSetConfig\PostProcessorsConfig($v); }, $value['post_processors']);
             unset($value['post_processors']);
         }
-    
+
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-    
+
     public function toArray(): array
     {
         $output = [];
-        if (null !== $this->quality) {
+        if (isset($this->_usedProperties['quality'])) {
             $output['quality'] = $this->quality;
         }
-        if (null !== $this->jpegQuality) {
+        if (isset($this->_usedProperties['jpegQuality'])) {
             $output['jpeg_quality'] = $this->jpegQuality;
         }
-        if (null !== $this->pngCompressionLevel) {
+        if (isset($this->_usedProperties['pngCompressionLevel'])) {
             $output['png_compression_level'] = $this->pngCompressionLevel;
         }
-        if (null !== $this->pngCompressionFilter) {
+        if (isset($this->_usedProperties['pngCompressionFilter'])) {
             $output['png_compression_filter'] = $this->pngCompressionFilter;
         }
-        if (null !== $this->format) {
+        if (isset($this->_usedProperties['format'])) {
             $output['format'] = $this->format;
         }
-        if (null !== $this->animated) {
+        if (isset($this->_usedProperties['animated'])) {
             $output['animated'] = $this->animated;
         }
-        if (null !== $this->cache) {
+        if (isset($this->_usedProperties['cache'])) {
             $output['cache'] = $this->cache;
         }
-        if (null !== $this->dataLoader) {
+        if (isset($this->_usedProperties['dataLoader'])) {
             $output['data_loader'] = $this->dataLoader;
         }
-        if (null !== $this->defaultImage) {
+        if (isset($this->_usedProperties['defaultImage'])) {
             $output['default_image'] = $this->defaultImage;
         }
-        if (null !== $this->filters) {
+        if (isset($this->_usedProperties['filters'])) {
             $output['filters'] = array_map(function ($v) { return $v->toArray(); }, $this->filters);
         }
-        if (null !== $this->postProcessors) {
+        if (isset($this->_usedProperties['postProcessors'])) {
             $output['post_processors'] = array_map(function ($v) { return $v->toArray(); }, $this->postProcessors);
         }
-    
+
         return $output;
     }
 

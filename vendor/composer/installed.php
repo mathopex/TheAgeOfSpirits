@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '422bc731c807b5094d5c681580a72cdf1b53ca13',
+        'reference' => '9447f2eadac92c0d75cc933c4d3145b62674c70b',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '422bc731c807b5094d5c681580a72cdf1b53ca13',
+            'reference' => '9447f2eadac92c0d75cc933c4d3145b62674c70b',
             'dev_requirement' => false,
         ),
         'behat/transliterator' => array(
@@ -490,8 +490,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache-implementation' => array(

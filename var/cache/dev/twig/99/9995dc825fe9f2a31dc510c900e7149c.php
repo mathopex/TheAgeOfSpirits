@@ -57,12 +57,12 @@ class __TwigTemplate_e409c38130dd1ac92c91cb522e622c95 extends Template
          ";
         // line 8
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 16
+        // line 15
         echo "
         ";
-        // line 17
+        // line 16
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 20
+        // line 21
         echo "    </head>
 
 
@@ -70,22 +70,64 @@ class __TwigTemplate_e409c38130dd1ac92c91cb522e622c95 extends Template
 
 
         ";
-        // line 26
-        $this->loadTemplate("partials/_header.html.twig", "base.html.twig", 26)->display($context);
         // line 27
+        $this->loadTemplate("partials/_header.html.twig", "base.html.twig", 27)->display($context);
+        // line 28
         echo "
         <div class=\"container\">
             ";
-        // line 29
-        $this->displayBlock('body', $context, $blocks);
         // line 30
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 30, $this->source); })()), "flashes", [], "any", false, false, false, 30));
+        foreach ($context['_seq'] as $context["label"] => $context["messages"]) {
+            // line 31
+            echo "            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($context["messages"]);
+            foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+                // line 32
+                echo "                <div class=\"alert alert-";
+                echo twig_escape_filter($this->env, $context["label"], "html", null, true);
+                echo "\" role=\"alert\">
+                    ";
+                // line 33
+                echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+                echo "
+                </div>
+            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 36
+            echo "        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['label'], $context['messages'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 37
+        echo "
+            ";
+        // line 38
+        $this->displayBlock('body', $context, $blocks);
+        // line 39
         echo "        </div>
 
         ";
-        // line 32
-        $this->loadTemplate("partials/_footer.html.twig", "base.html.twig", 32)->display($context);
-        // line 33
+        // line 41
+        $this->loadTemplate("partials/_footer.html.twig", "base.html.twig", 41)->display($context);
+        // line 42
+        echo "        ";
+        $this->loadTemplate("partials/_modal_combat.html.twig", "base.html.twig", 42)->display($context);
+        // line 43
         echo "
+        <div id=\"site-data\"
+            class=\"d-none\"
+             data-combat-ajax-url=\"";
+        // line 46
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("combat_ajax_data");
+        echo "\"
+        ></div>
     </body>
 </html>
 ";
@@ -134,10 +176,6 @@ class __TwigTemplate_e409c38130dd1ac92c91cb522e622c95 extends Template
             <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
             <link href=\"https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap\" rel=\"stylesheet\">
              <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">
-            <link rel=\"stylesheet\" href=\"";
-        // line 14
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/styles.css"), "html", null, true);
-        echo "\">
         ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -147,7 +185,7 @@ class __TwigTemplate_e409c38130dd1ac92c91cb522e622c95 extends Template
 
     }
 
-    // line 17
+    // line 16
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -157,8 +195,13 @@ class __TwigTemplate_e409c38130dd1ac92c91cb522e622c95 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 18
-        echo "        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>
+        // line 17
+        echo "            <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
+            <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>
+            <script src=\"";
+        // line 19
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Js/scripts.js"), "html", null, true);
+        echo "\"></script>
         ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -168,7 +211,7 @@ class __TwigTemplate_e409c38130dd1ac92c91cb522e622c95 extends Template
 
     }
 
-    // line 29
+    // line 38
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -198,7 +241,7 @@ class __TwigTemplate_e409c38130dd1ac92c91cb522e622c95 extends Template
 
     public function getDebugInfo()
     {
-        return array (  172 => 29,  161 => 18,  151 => 17,  139 => 14,  130 => 9,  120 => 8,  101 => 5,  88 => 33,  86 => 32,  82 => 30,  80 => 29,  76 => 27,  74 => 26,  66 => 20,  64 => 17,  61 => 16,  59 => 8,  53 => 5,  47 => 1,);
+        return array (  215 => 38,  203 => 19,  199 => 17,  189 => 16,  172 => 9,  162 => 8,  143 => 5,  128 => 46,  123 => 43,  120 => 42,  118 => 41,  114 => 39,  112 => 38,  109 => 37,  103 => 36,  94 => 33,  89 => 32,  84 => 31,  80 => 30,  76 => 28,  74 => 27,  66 => 21,  64 => 16,  61 => 15,  59 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -216,11 +259,12 @@ class __TwigTemplate_e409c38130dd1ac92c91cb522e622c95 extends Template
             <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
             <link href=\"https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap\" rel=\"stylesheet\">
              <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">
-            <link rel=\"stylesheet\" href=\"{{ asset('css/styles.css') }}\">
         {% endblock %}
 
         {% block javascripts %}
-        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>
+            <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
+            <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>
+            <script src=\"{{ asset('Js/scripts.js') }}\"></script>
         {% endblock %}
     </head>
 
@@ -231,11 +275,24 @@ class __TwigTemplate_e409c38130dd1ac92c91cb522e622c95 extends Template
         {% include 'partials/_header.html.twig' %}
 
         <div class=\"container\">
+            {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class=\"alert alert-{{ label }}\" role=\"alert\">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
             {% block body %}{% endblock %}
         </div>
 
         {% include 'partials/_footer.html.twig' %}
+        {% include 'partials/_modal_combat.html.twig' %}
 
+        <div id=\"site-data\"
+            class=\"d-none\"
+             data-combat-ajax-url=\"{{ path('combat_ajax_data') }}\"
+        ></div>
     </body>
 </html>
 ", "base.html.twig", "C:\\Users\\matho\\Desktop\\TheAgeOfSpirits\\templates\\base.html.twig");

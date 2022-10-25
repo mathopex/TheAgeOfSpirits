@@ -45,36 +45,36 @@ class __TwigTemplate_ea430a040908ce6be477d9c4bf4d7613 extends Template
   <head>
     <meta charset=\"utf-8\">
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
-    <title>TheageOfSpirits</title>
-    <!-- <link rel=\"shortcut icon\" href=\"";
+    <title>Unity WebGL Player | TheageOfSpirits</title>
+    <link rel=\"shortcut icon\" href=\"";
         // line 7
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/TemplateData/favicon.ico"), "html", null, true);
-        echo "\"> -->
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("TemplateData/favicon.ico"), "html", null, true);
+        echo "\">
     <link rel=\"stylesheet\" href=\"";
         // line 8
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/TemplateData/style.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("TemplateData/style.css"), "html", null, true);
         echo "\">
     <script src=\"";
         // line 9
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/TemplateData/UnityProgress.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("TemplateData/UnityProgress.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/Build/UnityLoader.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Build/UnityLoader.js"), "html", null, true);
         echo "\"></script>
     <script>
       var unityInstance = UnityLoader.instantiate(\"unityContainer\", \"";
         // line 12
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/Build/appUnity.json"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Build/public.json"), "html", null, true);
         echo "\", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
     <div class=\"webgl-content\">
-      <div id=\"unityContainer\" style=\"width: 960px; height: 600px\"></div>
+      <div id=\"unityContainer\" style=\"width: 1280px; height: 720px\"></div>
       <div class=\"footer\">
-        <!-- <div class=\"webgl-logo\"></div> -->
-        <div class=\"fullscreen\" onclick=\"unityInstance.SetFullscreen(1)\"></div>
+        <div class=\"webgl-logo\"></div>
+        <!-- <div class=\"fullscreen\" onclick=\"unityInstance.SetFullscreen(1)\"></div> -->
         <!-- <div class=\"title\">TheageOfSpirits</div> -->
       </div>
     </div>
@@ -111,21 +111,21 @@ class __TwigTemplate_ea430a040908ce6be477d9c4bf4d7613 extends Template
   <head>
     <meta charset=\"utf-8\">
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
-    <title>TheageOfSpirits</title>
-    <!-- <link rel=\"shortcut icon\" href=\"{{asset('images/TemplateData/favicon.ico')}}\"> -->
-    <link rel=\"stylesheet\" href=\"{{asset('images/TemplateData/style.css')}}\">
-    <script src=\"{{asset('images/TemplateData/UnityProgress.js')}}\"></script>
-    <script src=\"{{asset('js/Build/UnityLoader.js')}}\"></script>
+    <title>Unity WebGL Player | TheageOfSpirits</title>
+    <link rel=\"shortcut icon\" href=\"{{asset('TemplateData/favicon.ico')}}\">
+    <link rel=\"stylesheet\" href=\"{{asset('TemplateData/style.css')}}\">
+    <script src=\"{{asset('TemplateData/UnityProgress.js')}}\"></script>
+    <script src=\"{{asset('Build/UnityLoader.js')}}\"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate(\"unityContainer\", \"{{asset('js/Build/appUnity.json')}}\", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate(\"unityContainer\", \"{{asset('Build/public.json')}}\", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
     <div class=\"webgl-content\">
-      <div id=\"unityContainer\" style=\"width: 960px; height: 600px\"></div>
+      <div id=\"unityContainer\" style=\"width: 1280px; height: 720px\"></div>
       <div class=\"footer\">
-        <!-- <div class=\"webgl-logo\"></div> -->
-        <div class=\"fullscreen\" onclick=\"unityInstance.SetFullscreen(1)\"></div>
+        <div class=\"webgl-logo\"></div>
+        <!-- <div class=\"fullscreen\" onclick=\"unityInstance.SetFullscreen(1)\"></div> -->
         <!-- <div class=\"title\">TheageOfSpirits</div> -->
       </div>
     </div>

@@ -115,7 +115,7 @@ class __TwigTemplate_8de0ff82f7b68ede851abae9e67d48dc extends Template
         // line 12
         echo "<body id=\"bg-gestionnaire-conctact\">
     <div id=\"gestionnaire-contact-padding\">
-        <h1 id=\"h1-gestionnaire-contact\">BIENVENUE DANS LA GESTION DES CONCTACTS</h1>
+        <h1 id=\"h1-gestionnaire-contact\">BIENVENUE DANS LA GESTION DES CONTACTS</h1>
             <form method=\"GET\">
                     <div>
                         <input type=\"text\" name=\"q\" value=\"";
@@ -125,7 +125,7 @@ class __TwigTemplate_8de0ff82f7b68ede851abae9e67d48dc extends Template
                         <button type=\"submit\" id=\"btn-gestionnaire-contact\">Rechercher</button>
                     </div>
             </form>
-            <table class=\"table table-striped\" id=\"table-gestionnaire-contact\">
+            <table  id=\"table-gestionnaire-contact\">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -170,18 +170,22 @@ class __TwigTemplate_8de0ff82f7b68ede851abae9e67d48dc extends Template
             // line 42
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_contact_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["contact"], "id", [], "any", false, false, false, 42)]), "html", null, true);
             echo "\" class=\"btn btn-sm btn-danger me-2\">Supprimer</a>
-                                    <a href=\"";
-            // line 43
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_contact_view", ["id" => twig_get_attribute($this->env, $this->source, $context["contact"], "id", [], "any", false, false, false, 43)]), "html", null, true);
-            echo "\" class=\"btn btn-sm btn-primary\">Voir</a>
                                 </td>
+                                <td>
+                                    <a href=\"";
+            // line 45
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_contact_view", ["id" => twig_get_attribute($this->env, $this->source, $context["contact"], "id", [], "any", false, false, false, 45)]), "html", null, true);
+            echo "\" class=\"btn btn-sm btn-primary\">Voir</a> 
+                                </td>
+                                   
+                               
                             </tr>
                         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['contact'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 51
         echo "                    </tbody>
             </table>
     </div>
@@ -207,7 +211,7 @@ class __TwigTemplate_8de0ff82f7b68ede851abae9e67d48dc extends Template
 
     public function getDebugInfo()
     {
-        return array (  185 => 47,  175 => 43,  171 => 42,  166 => 40,  162 => 39,  158 => 38,  154 => 37,  150 => 36,  147 => 35,  143 => 34,  123 => 17,  116 => 12,  106 => 11,  87 => 9,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  189 => 51,  177 => 45,  171 => 42,  166 => 40,  162 => 39,  158 => 38,  154 => 37,  150 => 36,  147 => 35,  143 => 34,  123 => 17,  116 => 12,  106 => 11,  87 => 9,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -225,14 +229,14 @@ class __TwigTemplate_8de0ff82f7b68ede851abae9e67d48dc extends Template
 {% block body %}
 <body id=\"bg-gestionnaire-conctact\">
     <div id=\"gestionnaire-contact-padding\">
-        <h1 id=\"h1-gestionnaire-contact\">BIENVENUE DANS LA GESTION DES CONCTACTS</h1>
+        <h1 id=\"h1-gestionnaire-contact\">BIENVENUE DANS LA GESTION DES CONTACTS</h1>
             <form method=\"GET\">
                     <div>
                         <input type=\"text\" name=\"q\" value=\"{{ app.request.query.get('q') }}\" placeholder=\"Recherche...\" aria-label=\"Recherche...\" aria-describedby=\"button-addon2\">
                         <button type=\"submit\" id=\"btn-gestionnaire-contact\">Rechercher</button>
                     </div>
             </form>
-            <table class=\"table table-striped\" id=\"table-gestionnaire-contact\">
+            <table  id=\"table-gestionnaire-contact\">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -254,8 +258,12 @@ class __TwigTemplate_8de0ff82f7b68ede851abae9e67d48dc extends Template
                                 <td>{{ contact.Email }}</td>
                                 <td>
                                     <a href=\"{{ path('admin_contact_delete', {id: contact.id}) }}\" class=\"btn btn-sm btn-danger me-2\">Supprimer</a>
-                                    <a href=\"{{ path('admin_contact_view', {id: contact.id}) }}\" class=\"btn btn-sm btn-primary\">Voir</a>
                                 </td>
+                                <td>
+                                    <a href=\"{{ path('admin_contact_view', {id: contact.id}) }}\" class=\"btn btn-sm btn-primary\">Voir</a> 
+                                </td>
+                                   
+                               
                             </tr>
                         {% endfor %}
                     </tbody>

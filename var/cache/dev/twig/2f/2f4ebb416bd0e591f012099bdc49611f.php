@@ -25,6 +25,7 @@ class __TwigTemplate_02c66433342dde88d23a4865a4a55d19 extends Template
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
+            'stylesheets' => [$this, 'block_stylesheets'],
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
         ];
@@ -56,6 +57,33 @@ class __TwigTemplate_02c66433342dde88d23a4865a4a55d19 extends Template
     }
 
     // line 3
+    public function block_stylesheets($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        // line 4
+        echo "    ";
+        $this->displayParentBlock("stylesheets", $context, $blocks);
+        echo "
+    <link rel=\"stylesheet\" href=\"";
+        // line 5
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/styles.css"), "html", null, true);
+        echo "\">
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 8
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -74,7 +102,7 @@ class __TwigTemplate_02c66433342dde88d23a4865a4a55d19 extends Template
 
     }
 
-    // line 5
+    // line 10
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,37 +112,61 @@ class __TwigTemplate_02c66433342dde88d23a4865a4a55d19 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "\t<a href=\"";
+        // line 11
+        echo "<body id=\"bg-view\">
+\t<a href=\"";
+        // line 12
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_gestion");
         echo "\"><-- Retour</a>
 
+\t\t\t<!--Illustration-->
+\t\t\t<div id=\"carouselExampleSlidesOnly\" class=\"carousel slide\" data-bs-ride=\"carousel\">
+\t\t\t\t<div class=\"carousel-inner\">
+\t\t\t\t  <div class=\"carousel-item active\">
+\t\t\t\t\t<img src=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/carousel/banderole-admin1.png"), "html", null, true);
+        echo "\" class=\"d-block w-100\" alt=\"...\">
+\t\t\t\t  </div>
+\t\t\t\t  <div class=\"carousel-item\">
+\t\t\t\t\t<img src=\"";
+        // line 21
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/carousel/banderole-admin2.png"), "html", null, true);
+        echo "\" class=\"d-block w-100\" alt=\"...\">
+\t\t\t\t  </div>
+\t\t\t\t
+\t\t\t\t</div>
+\t\t\t  </div>
+\t\t
+
 \t<h1>Demande de contact # ";
-        // line 8
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 8, $this->source); })()), "id", [], "any", false, false, false, 8), "html", null, true);
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 28, $this->source); })()), "id", [], "any", false, false, false, 28), "html", null, true);
         echo "</h1>
 
-\t<div class=\"mt-5\">
+\t<div class=\"mt-5\" id=\"info-demandeView\">
 \t\t<div>ID : <b>";
-        // line 11
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 11, $this->source); })()), "id", [], "any", false, false, false, 11), "html", null, true);
+        // line 31
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 31, $this->source); })()), "id", [], "any", false, false, false, 31), "html", null, true);
         echo "</b></div>
 \t\t<div>Date : <b>";
-        // line 12
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 12, $this->source); })()), "createdAt", [], "any", false, false, false, 12), "d/m/Y \\à H\\hi"), "html", null, true);
+        // line 32
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 32, $this->source); })()), "createdAt", [], "any", false, false, false, 32), "d/m/Y \\à H\\hi"), "html", null, true);
         echo "</b></div>
 \t\t<div>Email : <b>";
-        // line 13
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 13, $this->source); })()), "email", [], "any", false, false, false, 13), "html", null, true);
+        // line 33
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 33, $this->source); })()), "email", [], "any", false, false, false, 33), "html", null, true);
         echo "</b></div>
 \t\t<div>
 \t\t\tMessage : <br>
 \t\t\t";
-        // line 16
-        echo twig_nl2br(twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 16, $this->source); })()), "message", [], "any", false, false, false, 16), "html", null, true));
+        // line 36
+        echo twig_nl2br(twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["contact"]) || array_key_exists("contact", $context) ? $context["contact"] : (function () { throw new RuntimeError('Variable "contact" does not exist.', 36, $this->source); })()), "message", [], "any", false, false, false, 36), "html", null, true));
         echo "
 \t\t</div>
 \t</div>
+</body>
+\t
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -136,21 +188,41 @@ class __TwigTemplate_02c66433342dde88d23a4865a4a55d19 extends Template
 
     public function getDebugInfo()
     {
-        return array (  114 => 16,  108 => 13,  104 => 12,  100 => 11,  94 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  164 => 36,  158 => 33,  154 => 32,  150 => 31,  144 => 28,  134 => 21,  128 => 18,  119 => 12,  116 => 11,  106 => 10,  87 => 8,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends \"base.html.twig\" %}
 
+{% block stylesheets %}
+    {{parent()}}
+    <link rel=\"stylesheet\" href=\"{{ asset('css/styles.css') }}\">
+{% endblock %}
+
 {% block title \"Demande de contact\" %}
 
 {% block body %}
+<body id=\"bg-view\">
 \t<a href=\"{{ path('contact_gestion') }}\"><-- Retour</a>
+
+\t\t\t<!--Illustration-->
+\t\t\t<div id=\"carouselExampleSlidesOnly\" class=\"carousel slide\" data-bs-ride=\"carousel\">
+\t\t\t\t<div class=\"carousel-inner\">
+\t\t\t\t  <div class=\"carousel-item active\">
+\t\t\t\t\t<img src=\"{{asset('images/carousel/banderole-admin1.png')}}\" class=\"d-block w-100\" alt=\"...\">
+\t\t\t\t  </div>
+\t\t\t\t  <div class=\"carousel-item\">
+\t\t\t\t\t<img src=\"{{asset('images/carousel/banderole-admin2.png')}}\" class=\"d-block w-100\" alt=\"...\">
+\t\t\t\t  </div>
+\t\t\t\t
+\t\t\t\t</div>
+\t\t\t  </div>
+\t\t
 
 \t<h1>Demande de contact # {{ contact.id }}</h1>
 
-\t<div class=\"mt-5\">
+\t<div class=\"mt-5\" id=\"info-demandeView\">
 \t\t<div>ID : <b>{{ contact.id }}</b></div>
 \t\t<div>Date : <b>{{ contact.createdAt|date('d/m/Y \\\\à H\\\\hi') }}</b></div>
 \t\t<div>Email : <b>{{ contact.email }}</b></div>
@@ -159,6 +231,8 @@ class __TwigTemplate_02c66433342dde88d23a4865a4a55d19 extends Template
 \t\t\t{{ contact.message|nl2br }}
 \t\t</div>
 \t</div>
+</body>
+\t
 {% endblock %}
 ", "admin/contact/view.html.twig", "C:\\Users\\matho\\Desktop\\TheAgeOfSpirits\\templates\\admin\\contact\\view.html.twig");
     }

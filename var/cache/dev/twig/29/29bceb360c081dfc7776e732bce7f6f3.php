@@ -42,35 +42,10 @@ class __TwigTemplate_453b0d16b35d47db6d0dd32dfc3a377d extends Template
         // line 1
         echo "<!-- Partie Header-->
 <header>
-    <!--   <div id=\"head-container\">
-
-            <div id=\"headerGD\">
-                <div id=\"headerG\">
-                    <img  id=\"img-logo\"src=\"";
-        // line 7
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo/LOGOwhite.png"), "html", null, true);
-        echo "\" alt=\"logo\"></a></div>
-                </div>
-
-                <div id=\"headerD\">
-                    <ul id=\"menu\">
-                            <li id=\"active\"><a href=\"#\">Accueil</a></li>
-                            <li><a href=\"#\">Règle du jeux</a></li>
-                            <li><a href=\"#\">News</a></li>
-                            <li><a href=\"#\">Contact</a></li>
-                            <li><a href=\"#\">Statistiques du site</a></li>
-                            <li><a href=\"#\">Admin</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-
-    </div>-->
     <nav class=\"navbar navbar-expand-lg navbar-light\" id=\"navbar-light\">
         <a class=\"navbar-brand\" href=\"#\">
             <img  id=\"img-logo\" src=\"";
-        // line 27
+        // line 5
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo/LOGOwhite.png"), "html", null, true);
         echo "\" alt=\"logo\">
         </a>
@@ -79,25 +54,123 @@ class __TwigTemplate_453b0d16b35d47db6d0dd32dfc3a377d extends Template
         </button>
         <div class=\"collapse navbar-collapse\" id=\"navbar\">
             <div class=\"navbar-nav\" id=\"menu\">
-                <a class=\"nav-item nav-link active\" href=\"#\">Accueil</a>
-                <a class=\"nav-item nav-link\" href=\"#\">Règles du jeux</a>
-                <a class=\"nav-item nav-link\" href=\"#\">News</a>
-                <a class=\"nav-item nav-link\" href=\"#\">Contact</a>
+                <a class=\"nav-item nav-link active\" href=\"";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_page");
+        echo "\">Accueil</a>
+                <a class=\"nav-item nav-link\" href=\"";
+        // line 13
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("regle");
+        echo "\">Règles du jeux</a>
+                <a class=\"nav-item nav-link\" href=\"";
+        // line 14
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("news");
+        echo "\">News</a>
+                <a class=\"nav-item nav-link\" href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
+        echo "\">Contact</a>
                 <a class=\"nav-item nav-link\" href=\"#\">statistiques du site</a>
-                <a class=\"nav-item nav-link\" href=\"#\">Admin</a>
-            </div>
+                ";
+        // line 17
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 18
+            echo "                <a class=\"nav-item nav-link\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_dashboard");
+            echo "\">Admin</a>
+                ";
+        }
+        // line 20
+        echo "                ";
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
+            // line 21
+            echo "                    <a class=\"nav-item nav-link\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("membre");
+            echo "\">Membre</a>
+\t\t\t\t";
+        }
+        // line 23
+        echo "                ";
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
+            // line 24
+            echo "                    <a class=\"nav-item nav-link\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("combat_list");
+            echo "\">Combat</a>
+\t\t\t\t";
+        }
+        // line 26
+        echo "            </div>
         </div>
+        ";
+        // line 28
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "user", [], "any", false, false, false, 28)) {
+            // line 29
+            echo "\t\t\t<li class=\"nav-item dropdown\" id=\"btn-deconnexion\">
+\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+                        <li><a class=\"dropdown-item\" href=\"";
+            // line 31
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_gestion");
+            echo "\">Gestion des utilisateurs</a></li>
+                        <li><a class=\"dropdown-item\" href=\"#\">Gestion du chat</a></li>
+\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"";
+            // line 33
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact_gestion");
+            echo "\">Gestion des contacts</a></li>
+\t\t\t\t\t";
+            // line 35
+            echo "\t\t\t\t\t<li><hr class=\"dropdown-divider\"></li>
+\t\t\t\t</ul>
+\t\t\t</li>
+\t\t";
+        }
+        // line 39
+        echo "            <ul class=\"navbar-nav mb-2 mb-lg-0\">
+                ";
+        // line 40
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "user", [], "any", false, false, false, 40)) {
+            // line 41
+            echo "                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"";
+            // line 42
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\" id=\"btn-nav-deconnexion\">Deconnexion</a>
+                    </li>
+                    ";
+        } else {
+            // line 45
+            echo "                ";
+        }
+        // line 46
+        echo "            </ul>
     </nav>
 
     <h1 id=\"h1\" style=\"font-family: 'MedievalSharp', cursive;\">The Age Of Spirits</h1>
     <div id=\"subHead\">
+        ";
+        // line 51
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 51, $this->source); })()), "user", [], "any", false, false, false, 51)) {
+            // line 52
+            echo "
+        ";
+        } else {
+            // line 54
+            echo "
         <div id=\"btn-headG\">
-                <button id=\"btn-header-inscription\" type=\"button\">Inscription</button>
+                <a href=\"";
+            // line 56
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("registration");
+            echo "\" class=\"btn btn-lg btn-dark\" id=\"btn-header-inscription\">Inscription</a>
         </div>
         <div id=\"btn-headD\">
-                <button id=\"btn-header-connexion\" type=\"button\">Connexion</button>
+                <a href=\"";
+            // line 59
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            echo "\" class=\"btn btn-lg btn-dark\" id=\"btn-header-connexion\">Connexion</a>
          </div>
-    </div>
+        ";
+        }
+        // line 62
+        echo "    </div>
     <p id=\"speach\">The Age of Spirits est un jeu navigateur qui permet de créer son personnage dans le royaume de Bolateria et de choisir son camp pour combattre les humains ou les esprits</p>
 </header>
 ";
@@ -121,35 +194,13 @@ class __TwigTemplate_453b0d16b35d47db6d0dd32dfc3a377d extends Template
 
     public function getDebugInfo()
     {
-        return array (  74 => 27,  51 => 7,  43 => 1,);
+        return array (  173 => 62,  167 => 59,  161 => 56,  157 => 54,  153 => 52,  151 => 51,  144 => 46,  141 => 45,  135 => 42,  132 => 41,  130 => 40,  127 => 39,  121 => 35,  117 => 33,  112 => 31,  108 => 29,  106 => 28,  102 => 26,  96 => 24,  93 => 23,  87 => 21,  84 => 20,  78 => 18,  76 => 17,  71 => 15,  67 => 14,  63 => 13,  59 => 12,  49 => 5,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!-- Partie Header-->
 <header>
-    <!--   <div id=\"head-container\">
-
-            <div id=\"headerGD\">
-                <div id=\"headerG\">
-                    <img  id=\"img-logo\"src=\"{{asset('images/logo/LOGOwhite.png')}}\" alt=\"logo\"></a></div>
-                </div>
-
-                <div id=\"headerD\">
-                    <ul id=\"menu\">
-                            <li id=\"active\"><a href=\"#\">Accueil</a></li>
-                            <li><a href=\"#\">Règle du jeux</a></li>
-                            <li><a href=\"#\">News</a></li>
-                            <li><a href=\"#\">Contact</a></li>
-                            <li><a href=\"#\">Statistiques du site</a></li>
-                            <li><a href=\"#\">Admin</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-
-    </div>-->
     <nav class=\"navbar navbar-expand-lg navbar-light\" id=\"navbar-light\">
         <a class=\"navbar-brand\" href=\"#\">
             <img  id=\"img-logo\" src=\"{{asset('images/logo/LOGOwhite.png')}}\" alt=\"logo\">
@@ -159,24 +210,56 @@ class __TwigTemplate_453b0d16b35d47db6d0dd32dfc3a377d extends Template
         </button>
         <div class=\"collapse navbar-collapse\" id=\"navbar\">
             <div class=\"navbar-nav\" id=\"menu\">
-                <a class=\"nav-item nav-link active\" href=\"#\">Accueil</a>
-                <a class=\"nav-item nav-link\" href=\"#\">Règles du jeux</a>
-                <a class=\"nav-item nav-link\" href=\"#\">News</a>
-                <a class=\"nav-item nav-link\" href=\"#\">Contact</a>
+                <a class=\"nav-item nav-link active\" href=\"{{ path('home_page') }}\">Accueil</a>
+                <a class=\"nav-item nav-link\" href=\"{{ path('regle') }}\">Règles du jeux</a>
+                <a class=\"nav-item nav-link\" href=\"{{ path('news') }}\">News</a>
+                <a class=\"nav-item nav-link\" href=\"{{ path('contact') }}\">Contact</a>
                 <a class=\"nav-item nav-link\" href=\"#\">statistiques du site</a>
-                <a class=\"nav-item nav-link\" href=\"#\">Admin</a>
+                {% if is_granted('ROLE_ADMIN') %}
+                <a class=\"nav-item nav-link\" href=\"{{ path('admin_dashboard') }}\">Admin</a>
+                {% endif %}
+                {% if is_granted('ROLE_USER') %}
+                    <a class=\"nav-item nav-link\" href=\"{{ path('membre') }}\">Membre</a>
+\t\t\t\t{% endif %}
+                {% if is_granted('ROLE_USER') %}
+                    <a class=\"nav-item nav-link\" href=\"{{ path('combat_list') }}\">Combat</a>
+\t\t\t\t{% endif %}
             </div>
         </div>
+        {% if app.user %}
+\t\t\t<li class=\"nav-item dropdown\" id=\"btn-deconnexion\">
+\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+                        <li><a class=\"dropdown-item\" href=\"{{ path('user_gestion') }}\">Gestion des utilisateurs</a></li>
+                        <li><a class=\"dropdown-item\" href=\"#\">Gestion du chat</a></li>
+\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"{{ path('contact_gestion') }}\">Gestion des contacts</a></li>
+\t\t\t\t\t{# liens pour les pages ROLE_USER #}
+\t\t\t\t\t<li><hr class=\"dropdown-divider\"></li>
+\t\t\t\t</ul>
+\t\t\t</li>
+\t\t{% endif %}
+            <ul class=\"navbar-nav mb-2 mb-lg-0\">
+                {% if app.user %}
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"{{ path('app_logout') }}\" id=\"btn-nav-deconnexion\">Deconnexion</a>
+                    </li>
+                    {% else %}
+                {% endif %}
+            </ul>
     </nav>
 
     <h1 id=\"h1\" style=\"font-family: 'MedievalSharp', cursive;\">The Age Of Spirits</h1>
     <div id=\"subHead\">
+        {% if app.user %}
+
+        {% else %}
+
         <div id=\"btn-headG\">
-                <button id=\"btn-header-inscription\" type=\"button\">Inscription</button>
+                <a href=\"{{ path('registration') }}\" class=\"btn btn-lg btn-dark\" id=\"btn-header-inscription\">Inscription</a>
         </div>
         <div id=\"btn-headD\">
-                <button id=\"btn-header-connexion\" type=\"button\">Connexion</button>
+                <a href=\"{{ path('app_login') }}\" class=\"btn btn-lg btn-dark\" id=\"btn-header-connexion\">Connexion</a>
          </div>
+        {% endif %}
     </div>
     <p id=\"speach\">The Age of Spirits est un jeu navigateur qui permet de créer son personnage dans le royaume de Bolateria et de choisir son camp pour combattre les humains ou les esprits</p>
 </header>

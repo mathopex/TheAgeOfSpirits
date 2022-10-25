@@ -26,6 +26,7 @@ class __TwigTemplate_913247502df85d55fbaaa276bdb8bded extends Template
 
         $this->blocks = [
             'stylesheets' => [$this, 'block_stylesheets'],
+            'javascripts' => [$this, 'block_javascripts'],
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
         ];
@@ -83,7 +84,34 @@ class __TwigTemplate_913247502df85d55fbaaa276bdb8bded extends Template
 
     }
 
-    // line 9
+    // line 8
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 9
+        echo "    ";
+        $this->displayParentBlock("javascripts", $context, $blocks);
+        echo "
+    <script src=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Js/perso-create.js"), "html", null, true);
+        echo "\"></script>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 15
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -102,7 +130,7 @@ class __TwigTemplate_913247502df85d55fbaaa276bdb8bded extends Template
 
     }
 
-    // line 11
+    // line 17
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -112,97 +140,93 @@ class __TwigTemplate_913247502df85d55fbaaa276bdb8bded extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 12
+        // line 18
         echo "<body id=\"bg-create-personnage\">
     <div id=\"create-personnage-padding\">
         <h1 id=\"h1-create-personnage\">Création Personnage</h1>
 
             ";
-        // line 16
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_start');
-        echo "
-
-                    ";
-        // line 18
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), "pseudo", [], "any", false, false, false, 18), 'row');
-        echo "
-
-                <div class=\"row\">
-                    <div class=\"col-md-6\">
-                        ";
         // line 22
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "class", [], "any", false, false, false, 22), 'row');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), 'form_start');
         echo "
-                    </div>
-                    <div class=\"col-md-6\">
-                        ";
-        // line 25
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 25, $this->source); })()), "clan", [], "any", false, false, false, 25), 'row');
-        echo "
-                    </div>
-                </div>    
 
                     ";
-        // line 29
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), "sex", [], "any", false, false, false, 29), 'row');
+        // line 24
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), "pseudo", [], "any", false, false, false, 24), 'row');
         echo "
-                    
+
                 <div class=\"row\">
                     <div class=\"col-md-6\">
                         ";
-        // line 33
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), "height", [], "any", false, false, false, 33), 'row');
+        // line 28
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), "class", [], "any", false, false, false, 28), 'row', ["id" => "perso_class"]);
         echo "
                     </div>
                     <div class=\"col-md-6\">
                         ";
-        // line 36
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 36, $this->source); })()), "weight", [], "any", false, false, false, 36), 'row');
-        echo " 
-                    </div>
-                </div>    
-                <div class=\"row\">
-                    <div class=\"col-md-6\">
-                        ";
-        // line 41
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 41, $this->source); })()), "health", [], "any", false, false, false, 41), 'row');
-        echo "    
-                    </div>
-                    <div class=\"col-md-6\">
-                        ";
-        // line 44
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 44, $this->source); })()), "attack", [], "any", false, false, false, 44), 'row');
-        echo "   
+        // line 31
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 31, $this->source); })()), "clan", [], "any", false, false, false, 31), 'row', ["id" => "perso_clan"]);
+        echo "
                     </div>
                 </div>
 
                     ";
-        // line 48
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 48, $this->source); })()), "defense", [], "any", false, false, false, 48), 'row');
+        // line 35
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 35, $this->source); })()), "sex", [], "any", false, false, false, 35), 'row', ["id" => "perso_sex"]);
         echo "
-                
 
-                <div class=\"row\">
-                    <div class=\"col-md-6\">
-                        ";
-        // line 53
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 53, $this->source); })()), "specialitis", [], "any", false, false, false, 53), 'row');
-        echo "
-                    </div>
-                    <div class=\"col-md-6\">
-                        ";
-        // line 56
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 56, $this->source); })()), "specialitis_value", [], "any", false, false, false, 56), 'row');
-        echo "
-                    </div>
-                </div>
                     <button class=\"btn-inscription\" type=\"submit\" id=\"btn-create-personnage\">Valider</button>
             ";
-        // line 60
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 60, $this->source); })()), 'form_end');
-        echo "<br><br>
-    
+        // line 38
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 38, $this->source); })()), 'form_end');
+        echo "
     </div>
+<div id=\"container-perso-pagecreation\">
+    <!-- 1 ligne de card perso -->
+    <h2 id=\"h2-perso\">Nos personnages</h2>
+
+    <div class=\"row row-cols-1 row-cols-md-3 g-4\">
+        ";
+        // line 45
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["persos"]) || array_key_exists("persos", $context) ? $context["persos"] : (function () { throw new RuntimeError('Variable "persos" does not exist.', 45, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["perso"]) {
+            // line 46
+            echo "            <div class=\"col perso-card\" data-clan=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["perso"], "clan", [], "any", false, false, false, 46), "html", null, true);
+            echo "\" data-class=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["perso"], "class", [], "any", false, false, false, 46), "html", null, true);
+            echo "\" data-sex=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["perso"], "sex", [], "any", false, false, false, 46), "html", null, true);
+            echo "\">
+                <h5 class=\"card-title\" id=\"card-title-perso\">";
+            // line 47
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(("perso.class." . twig_get_attribute($this->env, $this->source, $context["perso"], "class", [], "any", false, false, false, 47))), "html", null, true);
+            echo " ";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(("perso.sex." . twig_get_attribute($this->env, $this->source, $context["perso"], "sex", [], "any", false, false, false, 47))), "html", null, true);
+            echo "</h5>
+                <div class=\"card h-100\" id=\"h-100\">
+                    <img src=\"";
+            // line 49
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, $context["perso"], "image", [], "any", false, false, false, 49)), "html", null, true);
+            echo "\" class=\"card-img-top\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["perso"], "clan", [], "any", false, false, false, 49), "html", null, true);
+            echo " ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["perso"], "class", [], "any", false, false, false, 49), "html", null, true);
+            echo " ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["perso"], "sex", [], "any", false, false, false, 49), "html", null, true);
+            echo "\">
+                </div>
+            </div>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['perso'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 53
+        echo "    </div>
+</div>
+
 </body>
 ";
         
@@ -225,7 +249,7 @@ class __TwigTemplate_913247502df85d55fbaaa276bdb8bded extends Template
 
     public function getDebugInfo()
     {
-        return array (  202 => 60,  195 => 56,  189 => 53,  181 => 48,  174 => 44,  168 => 41,  160 => 36,  154 => 33,  147 => 29,  140 => 25,  134 => 22,  127 => 18,  122 => 16,  116 => 12,  106 => 11,  87 => 9,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  227 => 53,  211 => 49,  204 => 47,  195 => 46,  191 => 45,  181 => 38,  175 => 35,  168 => 31,  162 => 28,  155 => 24,  150 => 22,  144 => 18,  134 => 17,  115 => 15,  103 => 10,  98 => 9,  88 => 8,  76 => 5,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -236,6 +260,12 @@ class __TwigTemplate_913247502df85d55fbaaa276bdb8bded extends Template
     {{parent()}}
     <link rel=\"stylesheet\" href=\"{{ asset('css/styles.css') }}\">
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src=\"{{ asset('Js/perso-create.js') }}\"></script>
+{% endblock %}
+
 
 
 {% block title %}Création Personnage !{% endblock %}
@@ -251,47 +281,34 @@ class __TwigTemplate_913247502df85d55fbaaa276bdb8bded extends Template
 
                 <div class=\"row\">
                     <div class=\"col-md-6\">
-                        {{ form_row(form.class) }}
+                        {{ form_row(form.class, {id: 'perso_class'}) }}
                     </div>
                     <div class=\"col-md-6\">
-                        {{ form_row(form.clan) }}
-                    </div>
-                </div>    
-
-                    {{ form_row(form.sex) }}
-                    
-                <div class=\"row\">
-                    <div class=\"col-md-6\">
-                        {{ form_row(form.height) }}
-                    </div>
-                    <div class=\"col-md-6\">
-                        {{ form_row(form.weight) }} 
-                    </div>
-                </div>    
-                <div class=\"row\">
-                    <div class=\"col-md-6\">
-                        {{ form_row(form.health) }}    
-                    </div>
-                    <div class=\"col-md-6\">
-                        {{ form_row(form.attack) }}   
+                        {{ form_row(form.clan, {id: 'perso_clan'}) }}
                     </div>
                 </div>
 
-                    {{ form_row(form.defense) }}
-                
+                    {{ form_row(form.sex, {id: 'perso_sex'}) }}
 
-                <div class=\"row\">
-                    <div class=\"col-md-6\">
-                        {{ form_row(form.specialitis) }}
-                    </div>
-                    <div class=\"col-md-6\">
-                        {{ form_row(form.specialitis_value) }}
-                    </div>
-                </div>
                     <button class=\"btn-inscription\" type=\"submit\" id=\"btn-create-personnage\">Valider</button>
-            {{ form_end(form) }}<br><br>
-    
+            {{ form_end(form) }}
     </div>
+<div id=\"container-perso-pagecreation\">
+    <!-- 1 ligne de card perso -->
+    <h2 id=\"h2-perso\">Nos personnages</h2>
+
+    <div class=\"row row-cols-1 row-cols-md-3 g-4\">
+        {% for perso in persos %}
+            <div class=\"col perso-card\" data-clan=\"{{ perso.clan }}\" data-class=\"{{ perso.class }}\" data-sex=\"{{ perso.sex }}\">
+                <h5 class=\"card-title\" id=\"card-title-perso\">{{ ('perso.class.' ~ perso.class)|trans }} {{ ('perso.sex.' ~ perso.sex)|trans }}</h5>
+                <div class=\"card h-100\" id=\"h-100\">
+                    <img src=\"{{asset(perso.image)}}\" class=\"card-img-top\" alt=\"{{ perso.clan }} {{ perso.class }} {{ perso.sex }}\">
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
 </body>
 {% endblock %}
 

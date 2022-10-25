@@ -51,12 +51,21 @@ class __TwigTemplate_61ad915cd6d82d0ac62d4a6326726a2d extends Template
         </div>
         <div id=\"nav-footer\">
           <ul id=\"navbar\">
-              <li id=\"active\"><a href=\"#\">Accueil</a></li>
-              <li><a href=\"#\">Règle du jeux</a></li>
+              <li id=\"active\"><a href=\"";
+        // line 9
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_page");
+        echo "\">Accueil</a></li>
+              <li><a href=\"";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("regle");
+        echo "\">Règle du jeux</a></li>
               <li><a href=\"#\">News</a></li>
-              <li><a href=\"#\">Contact</a></li>
+              <li><a href=\"";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
+        echo "\">Contact</a></li>
               <li><a href=\"#\">Statistiques du site</a></li>
-              <li><a href=\"#\">Admin</a></li>
+              
       </ul>
   </div>
         </div>
@@ -87,7 +96,7 @@ class __TwigTemplate_61ad915cd6d82d0ac62d4a6326726a2d extends Template
 
     public function getDebugInfo()
     {
-        return array (  49 => 5,  43 => 1,);
+        return array (  65 => 12,  60 => 10,  56 => 9,  49 => 5,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -100,12 +109,12 @@ class __TwigTemplate_61ad915cd6d82d0ac62d4a6326726a2d extends Template
         </div>
         <div id=\"nav-footer\">
           <ul id=\"navbar\">
-              <li id=\"active\"><a href=\"#\">Accueil</a></li>
-              <li><a href=\"#\">Règle du jeux</a></li>
+              <li id=\"active\"><a href=\"{{ path('home_page') }}\">Accueil</a></li>
+              <li><a href=\"{{ path('regle') }}\">Règle du jeux</a></li>
               <li><a href=\"#\">News</a></li>
-              <li><a href=\"#\">Contact</a></li>
+              <li><a href=\"{{ path('contact') }}\">Contact</a></li>
               <li><a href=\"#\">Statistiques du site</a></li>
-              <li><a href=\"#\">Admin</a></li>
+              
       </ul>
   </div>
         </div>

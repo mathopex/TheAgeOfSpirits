@@ -50,12 +50,12 @@ class __TwigTemplate_31a694118eb67e40200635307d2687e6 extends Template
         $this->displayBlock('title', $context, $blocks);
         // line 4
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 6
+        // line 7
         echo " 
 
 
 ";
-        // line 9
+        // line 10
         $this->displayBlock('body', $context, $blocks);
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -94,7 +94,9 @@ class __TwigTemplate_31a694118eb67e40200635307d2687e6 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
-        echo "<link rel=\"stylesheet\" href=\"";
+        echo "<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">
+<link rel=\"stylesheet\" href=\"";
+        // line 6
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/stylesPreHome.css"), "html", null, true);
         echo "\">
 ";
@@ -106,7 +108,7 @@ class __TwigTemplate_31a694118eb67e40200635307d2687e6 extends Template
 
     }
 
-    // line 9
+    // line 10
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -116,12 +118,16 @@ class __TwigTemplate_31a694118eb67e40200635307d2687e6 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 10
-        echo " 
-<button class=\"btn-preHome\" type=\"button\"><a href=\" ";
         // line 11
+        echo " <div id=\"\">
+     <div id=\"btn-ph\">
+        <a href=\" ";
+        // line 13
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_page");
-        echo "\">Entrez</a></button>
+        echo "\" class=\"btn btn-lg btn-dark\" id=\"btn-preHome\">Entrez</a>
+     </div>  
+ </div>
+
  
 ";
         
@@ -139,7 +145,7 @@ class __TwigTemplate_31a694118eb67e40200635307d2687e6 extends Template
 
     public function getDebugInfo()
     {
-        return array (  123 => 11,  120 => 10,  110 => 9,  97 => 5,  87 => 4,  69 => 3,  59 => 9,  54 => 6,  52 => 4,  50 => 3,  46 => 1,);
+        return array (  126 => 13,  122 => 11,  112 => 10,  100 => 6,  97 => 5,  87 => 4,  69 => 3,  59 => 10,  54 => 7,  52 => 4,  50 => 3,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -148,13 +154,18 @@ class __TwigTemplate_31a694118eb67e40200635307d2687e6 extends Template
 
 {% block title %}{% endblock %}
 {% block stylesheets %}
+<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">
 <link rel=\"stylesheet\" href=\"{{ asset('css/stylesPreHome.css') }}\">
 {% endblock %} 
 
 
 {% block body %}
- 
-<button class=\"btn-preHome\" type=\"button\"><a href=\" {{ path('home_page') }}\">Entrez</a></button>
+ <div id=\"\">
+     <div id=\"btn-ph\">
+        <a href=\" {{ path('home_page') }}\" class=\"btn btn-lg btn-dark\" id=\"btn-preHome\">Entrez</a>
+     </div>  
+ </div>
+
  
 {% endblock %}
 ", "base/preHomePage.html.twig", "C:\\Users\\matho\\Desktop\\TheAgeOfSpirits\\templates\\base\\preHomePage.html.twig");

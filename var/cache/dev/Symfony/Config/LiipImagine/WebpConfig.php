@@ -7,9 +7,8 @@ require_once __DIR__.\DIRECTORY_SEPARATOR.'Webp'.\DIRECTORY_SEPARATOR.'PostProce
 use Symfony\Component\Config\Loader\ParamConfigurator;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 
-
 /**
- * This class is automatically generated to help creating config.
+ * This class is automatically generated to help in creating a config.
  */
 class WebpConfig 
 {
@@ -18,7 +17,8 @@ class WebpConfig
     private $cache;
     private $dataLoader;
     private $postProcessors;
-    
+    private $_usedProperties = [];
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -26,11 +26,12 @@ class WebpConfig
      */
     public function generate($value): static
     {
+        $this->_usedProperties['generate'] = true;
         $this->generate = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 100
      * @param ParamConfigurator|int $value
@@ -38,11 +39,12 @@ class WebpConfig
      */
     public function quality($value): static
     {
+        $this->_usedProperties['quality'] = true;
         $this->quality = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -50,11 +52,12 @@ class WebpConfig
      */
     public function cache($value): static
     {
+        $this->_usedProperties['cache'] = true;
         $this->cache = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -62,75 +65,80 @@ class WebpConfig
      */
     public function dataLoader($value): static
     {
+        $this->_usedProperties['dataLoader'] = true;
         $this->dataLoader = $value;
-    
+
         return $this;
     }
-    
+
     public function postProcessors(string $name, array $value = []): \Symfony\Config\LiipImagine\Webp\PostProcessorsConfig
     {
         if (!isset($this->postProcessors[$name])) {
-            return $this->postProcessors[$name] = new \Symfony\Config\LiipImagine\Webp\PostProcessorsConfig($value);
+            $this->_usedProperties['postProcessors'] = true;
+            $this->postProcessors[$name] = new \Symfony\Config\LiipImagine\Webp\PostProcessorsConfig($value);
+        } elseif (1 < \func_num_args()) {
+            throw new InvalidConfigurationException('The node created by "postProcessors()" has already been initialized. You cannot pass values the second time you call postProcessors().');
         }
-        if ([] === $value) {
-            return $this->postProcessors[$name];
-        }
-    
-        throw new InvalidConfigurationException('The node created by "postProcessors()" has already been initialized. You cannot pass values the second time you call postProcessors().');
+
+        return $this->postProcessors[$name];
     }
-    
+
     public function __construct(array $value = [])
     {
-    
-        if (isset($value['generate'])) {
+        if (array_key_exists('generate', $value)) {
+            $this->_usedProperties['generate'] = true;
             $this->generate = $value['generate'];
             unset($value['generate']);
         }
-    
-        if (isset($value['quality'])) {
+
+        if (array_key_exists('quality', $value)) {
+            $this->_usedProperties['quality'] = true;
             $this->quality = $value['quality'];
             unset($value['quality']);
         }
-    
-        if (isset($value['cache'])) {
+
+        if (array_key_exists('cache', $value)) {
+            $this->_usedProperties['cache'] = true;
             $this->cache = $value['cache'];
             unset($value['cache']);
         }
-    
-        if (isset($value['data_loader'])) {
+
+        if (array_key_exists('data_loader', $value)) {
+            $this->_usedProperties['dataLoader'] = true;
             $this->dataLoader = $value['data_loader'];
             unset($value['data_loader']);
         }
-    
-        if (isset($value['post_processors'])) {
+
+        if (array_key_exists('post_processors', $value)) {
+            $this->_usedProperties['postProcessors'] = true;
             $this->postProcessors = array_map(function ($v) { return new \Symfony\Config\LiipImagine\Webp\PostProcessorsConfig($v); }, $value['post_processors']);
             unset($value['post_processors']);
         }
-    
+
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-    
+
     public function toArray(): array
     {
         $output = [];
-        if (null !== $this->generate) {
+        if (isset($this->_usedProperties['generate'])) {
             $output['generate'] = $this->generate;
         }
-        if (null !== $this->quality) {
+        if (isset($this->_usedProperties['quality'])) {
             $output['quality'] = $this->quality;
         }
-        if (null !== $this->cache) {
+        if (isset($this->_usedProperties['cache'])) {
             $output['cache'] = $this->cache;
         }
-        if (null !== $this->dataLoader) {
+        if (isset($this->_usedProperties['dataLoader'])) {
             $output['data_loader'] = $this->dataLoader;
         }
-        if (null !== $this->postProcessors) {
+        if (isset($this->_usedProperties['postProcessors'])) {
             $output['post_processors'] = array_map(function ($v) { return $v->toArray(); }, $this->postProcessors);
         }
-    
+
         return $output;
     }
 
