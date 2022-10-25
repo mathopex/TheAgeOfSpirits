@@ -117,36 +117,7 @@ class __TwigTemplate_15ec48c8c7ce551d7569ade90e2b5a70 extends Template
     <div id=\"news-padding\">
         <div>
             <h1 id=\"h1-news\">Newsletter</h1>
-
-
-            ";
-        // line 16
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_start');
-        echo "
-
-                ";
-        // line 18
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), "title", [], "any", false, false, false, 18), 'row');
-        echo "
-              
-                ";
-        // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), "message", [], "any", false, false, false, 20), 'row');
-        echo "
-                
-                ";
-        // line 22
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "author", [], "any", false, false, false, 22), 'row');
-        echo "
-
-            <div>
-                <button type=\"submit\"id=\"btn-send\">Envoyer</button>
-            </div>
-
-            ";
-        // line 28
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), 'form_end');
-        echo "
+            
         </div>
     </div>
 
@@ -174,7 +145,7 @@ class __TwigTemplate_15ec48c8c7ce551d7569ade90e2b5a70 extends Template
 
     public function getDebugInfo()
     {
-        return array (  148 => 28,  139 => 22,  134 => 20,  129 => 18,  124 => 16,  116 => 10,  106 => 9,  87 => 7,  75 => 4,  70 => 3,  60 => 2,  37 => 1,);
+        return array (  116 => 10,  106 => 9,  87 => 7,  75 => 4,  70 => 3,  60 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -192,21 +163,7 @@ class __TwigTemplate_15ec48c8c7ce551d7569ade90e2b5a70 extends Template
     <div id=\"news-padding\">
         <div>
             <h1 id=\"h1-news\">Newsletter</h1>
-
-
-            {{ form_start(form) }}
-
-                {{ form_row(form.title) }}
-              
-                {{ form_row(form.message) }}
-                
-                {{ form_row(form.author) }}
-
-            <div>
-                <button type=\"submit\"id=\"btn-send\">Envoyer</button>
-            </div>
-
-            {{ form_end(form) }}
+            
         </div>
     </div>
 

@@ -5,8 +5,8 @@
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.runtime_environment">%env(default:kernel.environment:APP_RUNTIME_ENV)%</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.build_dir">C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev</parameter>
-    <parameter key="kernel.cache_dir">C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev</parameter>
+    <parameter key="kernel.build_dir">C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev</parameter>
+    <parameter key="kernel.cache_dir">C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev</parameter>
     <parameter key="kernel.logs_dir">C:\Users\matho\Desktop\TheAgeOfSpirits\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
@@ -121,14 +121,14 @@
     <parameter key="translator.logging">false</parameter>
     <parameter key="translator.default_path">C:\Users\matho\Desktop\TheAgeOfSpirits/translations</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
     <parameter key="router.resource">kernel::loadRoutes</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="serializer.mapping.cache.file">C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/serialization.php</parameter>
+    <parameter key="serializer.mapping.cache.file">C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/serialization.php</parameter>
     <parameter key="cache.prefix.seed">_C:\Users\matho\Desktop\TheAgeOfSpirits.App_KernelDevDebugContainer</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
@@ -138,15 +138,15 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/sessions</parameter>
+    <parameter key="session.save_path">C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
-    <parameter key="validator.mapping.cache.file">C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_main_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/profiler</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
       <parameter>@LiipImagine/Form/form_div_layout.html.twig</parameter>
@@ -247,7 +247,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
@@ -627,7 +627,7 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/http_cache</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/http_cache</argument>
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -637,7 +637,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -1335,7 +1335,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/pools/system</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1354,7 +1354,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/pools/app</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -1634,7 +1634,7 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/translations</argument>
+        <argument key="cache_dir">C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
@@ -2830,7 +2830,7 @@
       <argument type="service" id=".service_locator.VzzixsX.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev</argument>
+        <argument key="cache_dir">C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -2943,13 +2943,13 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/annotations.php</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache_adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
       <tag name="container.hot_path"/>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/annotations.php</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3081,10 +3081,10 @@
           </service>
         </argument>
       </argument>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/serialization.php</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/serialization.php</argument>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface">
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/serialization.php</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3239,7 +3239,7 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.factory.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorageFactory">
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/sessions</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag">
@@ -3251,7 +3251,7 @@
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler">
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
-          <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/sessions</argument>
+          <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/sessions</argument>
         </service>
       </argument>
     </service>
@@ -3434,10 +3434,10 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/validation.php</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/validation.php</argument>
     </service>
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/validation.php</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3643,7 +3643,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage">
-      <argument>file:C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/profiler</argument>
+      <argument>file:C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -3690,7 +3690,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/App_KernelDevDebugContainer</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/App_KernelDevDebugContainer</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector">
@@ -3883,7 +3883,7 @@
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="autoescape">name</argument>
-        <argument key="cache">C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/twig</argument>
+        <argument key="cache">C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -4985,7 +4985,7 @@
         <argument type="service" id=".doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/doctrine/orm/Proxies</argument>
+        <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -6839,6 +6839,12 @@
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
+    <service id=".service_locator.aKM6MDa" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
     <service id=".service_locator.dtaNb9Q" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6879,12 +6885,6 @@
         <argument key="notifyService" type="service_closure" id="App\Service\NotifyService"/>
       </argument>
     </service>
-    <service id=".service_locator.aKM6MDa" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-      </argument>
-    </service>
     <service id=".service_locator.4UFIY6Q" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6914,11 +6914,12 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.dRlW2Fj" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.vvNiKiR" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\DashboardController::ContactGestiton" type="service_closure" id=".service_locator.BlcLmcA"/>
         <argument key="App\Controller\Admin\DashboardController::UserGestion" type="service_closure" id=".service_locator.Q1F27w5"/>
+        <argument key="App\Controller\Admin\DashboardController::create_news" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\DashboardController::delete" type="service_closure" id=".service_locator.iToh589"/>
         <argument key="App\Controller\Admin\DashboardController::view" type="service_closure" id=".service_locator.IfaUx1P"/>
         <argument key="App\Controller\BaseController::home" type="service_closure" id=".service_locator.dtaNb9Q"/>
@@ -6930,7 +6931,6 @@
         <argument key="App\Controller\CombatController::wait" type="service_closure" id=".service_locator.nfYd6vO"/>
         <argument key="App\Controller\CombatController::waitData" type="service_closure" id=".service_locator.nfYd6vO"/>
         <argument key="App\Controller\ContactController::contact" type="service_closure" id=".service_locator.60bJY.Q"/>
-        <argument key="App\Controller\NewsController::index" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\PersoController::create" type="service_closure" id=".service_locator.4UFIY6Q"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator._60ahW5"/>
         <argument key="App\Controller\RegistrationController::registerVerificationEmail" type="service_closure" id=".service_locator.cItq8lq"/>
@@ -6943,6 +6943,7 @@
         <argument key="kernel::terminate" type="service_closure" id=".service_locator.bRdave9"/>
         <argument key="App\Controller\Admin\DashboardController:ContactGestiton" type="service_closure" id=".service_locator.BlcLmcA"/>
         <argument key="App\Controller\Admin\DashboardController:UserGestion" type="service_closure" id=".service_locator.Q1F27w5"/>
+        <argument key="App\Controller\Admin\DashboardController:create_news" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\DashboardController:delete" type="service_closure" id=".service_locator.iToh589"/>
         <argument key="App\Controller\Admin\DashboardController:view" type="service_closure" id=".service_locator.IfaUx1P"/>
         <argument key="App\Controller\BaseController:home" type="service_closure" id=".service_locator.dtaNb9Q"/>
@@ -6954,7 +6955,6 @@
         <argument key="App\Controller\CombatController:wait" type="service_closure" id=".service_locator.nfYd6vO"/>
         <argument key="App\Controller\CombatController:waitData" type="service_closure" id=".service_locator.nfYd6vO"/>
         <argument key="App\Controller\ContactController:contact" type="service_closure" id=".service_locator.60bJY.Q"/>
-        <argument key="App\Controller\NewsController:index" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\PersoController:create" type="service_closure" id=".service_locator.4UFIY6Q"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator._60ahW5"/>
         <argument key="App\Controller\RegistrationController:registerVerificationEmail" type="service_closure" id=".service_locator.cItq8lq"/>
@@ -7533,12 +7533,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.dRlW2Fj"/>
+      <argument type="service" id=".service_locator.vvNiKiR"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.dRlW2Fj"/>
+      <argument type="service" id=".service_locator.vvNiKiR"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -8188,7 +8188,7 @@
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
       <argument>f9M0R2PCWm</argument>
       <argument>0</argument>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/pools/app</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -8198,7 +8198,7 @@
       <argument>b-mbaxGUD0</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/pools/system</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -8206,7 +8206,7 @@
       <argument>rE9KqrQK9g</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/pools/system</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -8214,7 +8214,7 @@
       <argument>U9fBPZldIV</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/pools/system</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -8222,7 +8222,7 @@
       <argument>LLd9RcM4o9</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/pools/system</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -8230,7 +8230,7 @@
       <argument>zH2ELRs9hQ</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/pools/system</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -8238,7 +8238,7 @@
       <argument>x-xRdHz7WN</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/pools/system</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -8248,7 +8248,7 @@
       <argument>mw8SD7yZCf</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/Users/matho/Desktop/TheAgeOfSpirits/var/cache/dev/pools/system</argument>
+      <argument>C:\Users\matho\Desktop\TheAgeOfSpirits\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -8404,7 +8404,7 @@
     <service id="Liip\ImagineBundle\Imagine\Filter\FilterManager" alias="liip_imagine.filter.manager"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.dRlW2Fj"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.vvNiKiR"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -8428,7 +8428,7 @@
     <service id=".service_locator.dyixzBb" alias=".service_locator.60bJY.Q"/>
     <service id=".service_locator.Ov3qJC6" alias=".service_locator._60ahW5"/>
     <service id=".service_locator.MPthVmb" alias=".service_locator.cItq8lq"/>
-    <service id=".service_locator.FbOe85W" alias=".service_locator.dRlW2Fj"/>
+    <service id=".service_locator.xW6UBZn" alias=".service_locator.vvNiKiR"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.k8EjsIh" alias=".service_locator.wPMfMbs"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
@@ -8460,13 +8460,13 @@
     <service id=".service_locator.vXgTmaQ" alias=".service_locator.BlcLmcA"/>
     <service id=".service_locator.6xc_0Hc" alias=".service_locator.IfaUx1P"/>
     <service id=".service_locator.8oeQ1Y1" alias=".service_locator.iToh589"/>
+    <service id=".service_locator.bInR.ll" alias=".service_locator.aKM6MDa"/>
     <service id=".service_locator.TTRS5Vr" alias=".service_locator.dtaNb9Q"/>
     <service id=".service_locator.l3yG.P7" alias=".service_locator.FWqM42_"/>
     <service id=".service_locator.NFYo2Jz" alias=".service_locator.nfYd6vO"/>
     <service id=".service_locator.Op2XWSP" alias=".service_locator.PY5H1rJ"/>
     <service id=".service_locator.XtRDm9m" alias=".service_locator.iBsT8cY"/>
     <service id=".service_locator.mY1hyWh" alias=".service_locator.60bJY.Q"/>
-    <service id=".service_locator.bInR.ll" alias=".service_locator.aKM6MDa"/>
     <service id=".service_locator.PrRgmaQ" alias=".service_locator.4UFIY6Q"/>
     <service id=".service_locator.7nCcZ_f" alias=".service_locator._60ahW5"/>
     <service id=".service_locator.nS40H2D" alias=".service_locator.cItq8lq"/>

@@ -22,6 +22,7 @@ return [
     'contact_gestion' => [[], ['_controller' => 'App\\Controller\\Admin\\DashboardController::ContactGestiton'], [], [['text', '/m/admin/contactGestion']], [], [], []],
     'admin_contact_view' => [['id'], ['_controller' => 'App\\Controller\\Admin\\DashboardController::view'], [], [['variable', '', '[^/]++', 'id', true], ['text', '/m/admin#']], [], [], []],
     'admin_contact_delete' => [['id'], ['_controller' => 'App\\Controller\\Admin\\DashboardController::delete'], [], [['text', '/delete'], ['variable', '/', '[^/]++', 'id', true], ['text', '/m/admin']], [], [], []],
+    'News' => [[], ['_controller' => 'App\\Controller\\Admin\\DashboardController::create_news'], [], [['text', '/m/admin/News']], [], [], []],
     'pre_home_page' => [[], ['_controller' => 'App\\Controller\\BaseController::index'], [], [['text', '/']], [], [], []],
     'home_page' => [[], ['_controller' => 'App\\Controller\\BaseController::home'], [], [['text', '/accueil']], [], [], []],
     'combat_list' => [[], ['_controller' => 'App\\Controller\\CombatController::index'], [], [['text', '/combats']], [], [], []],

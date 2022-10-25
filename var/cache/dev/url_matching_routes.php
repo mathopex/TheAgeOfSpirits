@@ -16,6 +16,7 @@ return [
         '/m/admin' => [[['_route' => 'admin_dashboard', '_controller' => 'App\\Controller\\Admin\\DashboardController::index'], null, null, null, false, false, null]],
         '/m/admin/userGestion' => [[['_route' => 'user_gestion', '_controller' => 'App\\Controller\\Admin\\DashboardController::UserGestion'], null, null, null, false, false, null]],
         '/m/admin/contactGestion' => [[['_route' => 'contact_gestion', '_controller' => 'App\\Controller\\Admin\\DashboardController::ContactGestiton'], null, null, null, false, false, null]],
+        '/m/admin/News' => [[['_route' => 'News', '_controller' => 'App\\Controller\\Admin\\DashboardController::create_news'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'pre_home_page', '_controller' => 'App\\Controller\\BaseController::index'], null, null, null, false, false, null]],
         '/accueil' => [[['_route' => 'home_page', '_controller' => 'App\\Controller\\BaseController::home'], null, null, null, false, false, null]],
         '/combats' => [[['_route' => 'combat_list', '_controller' => 'App\\Controller\\CombatController::index'], null, null, null, false, false, null]],

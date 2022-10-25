@@ -11,7 +11,21 @@
     <div id="news-padding">
         <div>
             <h1 id="h1-news">Newsletter</h1>
-            
+
+
+            {{ form_start(form) }}
+
+                {{ form_row(form.title) }}
+              
+                {{ form_row(form.message) }}
+                
+                {{ form_row(form.author) }}
+
+            <div>
+                <button type="submit"id="btn-send">Envoyer</button>
+            </div>
+
+            {{ form_end(form) }}
         </div>
     </div>
 

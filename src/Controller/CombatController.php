@@ -3,15 +3,12 @@
 namespace App\Controller;
 
 use App\Entity\Combat;
-use App\Entity\Perso;
 use App\Entity\User;
 use App\Repository\CombatRepository;
-use App\Repository\PersoRepository;
 use App\Repository\UserRepository;
 use DateTimeImmutable;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 

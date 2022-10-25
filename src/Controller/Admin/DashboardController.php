@@ -3,6 +3,9 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Contact;
+use App\Entity\News;
+use App\Form\NewsType;
+use DateTimeImmutable;
 use App\Repository\ContactRepository;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -68,5 +71,28 @@ class DashboardController extends AbstractController
         $entityManager->flush();
         $this->addFlash('success', "Demande supprimée.");
         return $this->redirectToRoute('contact_gestion');
+    }
+
+
+    #[Route('/News', name: 'News')]
+    public function create_news(Request $request, EntityManagerInterface $entityManager): Response
+    {
+        $news = new News();
+        $form = $this->createForm(NewsType::class, $news);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $news->setCreatedAt(new DateTimeImmutable());
+            $entityManager->persist($news);
+            $entityManager->flush();
+
+            // 1. Afficher un message de succès
+            $this->addFlash('success', "Nous avons bien reçu votre message.");
+
+            return $this->redirectToRoute('news');
+        }
+        return $this->render('admin/news/index.html.twig', [
+            'form' => $form->createView(),
+        ]);
     }
 }
